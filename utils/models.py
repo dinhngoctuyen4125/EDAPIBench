@@ -6,23 +6,23 @@ from peft import PeftModelForCausalLM
 import os
 
 def init_deepseek1b(model_path="deepseek-ai/deepseek-coder-1.3b-base", device="cuda"):
-    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16, local_files_only=True)
+    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16)
     model.to(device)
-    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, padding_side='left', local_files_only=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, padding_side='left')
     tokenizer.pad_token_id = tokenizer.eos_token_id
     return model, tokenizer
 
 def init_starcoder3b(model_path="bigcode/starcoder2-3b", device="cuda"):
-    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16, local_files_only=True)
+    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16)
     model.to(device)
-    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, padding_side='left', local_files_only=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, padding_side='left')
     tokenizer.pad_token_id = tokenizer.eos_token_id
     return model, tokenizer
 
 def init_qwencoder3b(model_path="Qwen/Qwen2.5-Coder-3B", device="cuda"):
-    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16, local_files_only=True)
+    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16)
     model.to(device)
-    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, padding_side='left', local_files_only=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, padding_side='left')
     tokenizer.pad_token_id = tokenizer.eos_token_id
     return model, tokenizer
 

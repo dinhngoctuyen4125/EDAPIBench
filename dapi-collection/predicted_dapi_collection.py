@@ -3,8 +3,10 @@ import json
 
 if __name__ == '__main__':
     path = 'data/dapi-inference-results'
-    LIBS = ["transformers", "tensorflow", "pytorch", "numpy", "pandas", "scipy", "sklearn", "seaborn"]
-    model_list = ["deepseek-1.3b", "starcoder-3b", "qwencoder-3b"]
+    # LIBS = ["transformers", "tensorflow", "pytorch", "numpy", "pandas", "scipy", "sklearn", "seaborn"]
+    LIBS = ["numpy"]  # Pilot: use the 10 NumPy samples prepared in Step 1.
+    # model_list = ["deepseek-1.3b", "starcoder-3b", "qwencoder-3b"]
+    model_list = ["deepseek-1.3b"]
     output_path = 'data/predicted-dapi-results'
     
     for lib in LIBS:

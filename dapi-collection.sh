@@ -1,7 +1,9 @@
 #!/bin/bash
 
-for model in deepseek-1.3b starcoder-3b qwencoder-3b; do
-  for lib in pandas pytorch scipy seaborn sklearn tensorflow transformers; do
+# for model in deepseek-1.3b starcoder-3b qwencoder-3b; do
+for model in deepseek-1.3b; do
+  # for lib in pandas pytorch scipy seaborn sklearn tensorflow transformers; do
+  for lib in numpy; do
     python dapi-collection/dapi_inference.py --model "$model" --lib "$lib"
   done
 done
