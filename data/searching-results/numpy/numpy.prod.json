@@ -1,0 +1,830 @@
+[
+    {
+        "type": "content",
+        "path": "numpy/typing/tests/data/pass/fromnumeric.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 40,
+                    "line": 0,
+                    "column": 40
+                },
+                "end": {
+                    "offset": 43,
+                    "line": 0,
+                    "column": 43
+                }
+            }
+        ],
+        "repositoryID": 54128,
+        "repository": "github.com/numpy/numpy",
+        "repoStars": 33047,
+        "repoLastFetched": "2026-10-08T03:36:50.130621Z",
+        "branches": [
+            ""
+        ],
+        "commit": "679e62001618881ffa16d4e4826f0435e97b242f",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "\nnp.prod(a)\nnp.prod(b)\nnp.prod(c)\nnp.prod(A)\nnp.prod(B)\nnp.prod(a, dtype=None)\nnp.prod(A, dtype=None)\nnp.prod(A, axis=0)\nnp.prod(B, axis=0)\nnp.prod(A, keepdims=True)\nnp.prod(B, keepdims=True)\nnp.prod(b, out=d)\nnp.prod(B, out=d)\n\n",
+                "contentStart": {
+                    "offset": 2863,
+                    "line": 192,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2864,
+                            "line": 193,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2872,
+                            "line": 193,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2875,
+                            "line": 194,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2883,
+                            "line": 194,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2886,
+                            "line": 195,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2894,
+                            "line": 195,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2897,
+                            "line": 196,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2905,
+                            "line": 196,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2908,
+                            "line": 197,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2916,
+                            "line": 197,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2919,
+                            "line": 198,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2927,
+                            "line": 198,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2942,
+                            "line": 199,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2950,
+                            "line": 199,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2965,
+                            "line": 200,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2973,
+                            "line": 200,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2984,
+                            "line": 201,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 2992,
+                            "line": 201,
+                            "column": 8
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 3003,
+                            "line": 202,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 3011,
+                            "line": 202,
+                            "column": 8
+                        }
+                    }
+                ],
+                "bestLineMatch": 193
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "benchmark_prod.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 14,
+                    "line": 0,
+                    "column": 14
+                },
+                "end": {
+                    "offset": 17,
+                    "line": 0,
+                    "column": 17
+                }
+            }
+        ],
+        "repositoryID": 39984694,
+        "repository": "github.com/mm-mansour/Fast-Pandas",
+        "repoStars": 958,
+        "repoLastFetched": "2026-10-08T01:49:19.28534Z",
+        "branches": [
+            ""
+        ],
+        "commit": "70882ea18f2fd60bb95fe5af307c7ad5067a54d9",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "\ndef numpy_prod(df):\n    return np.prod(df[\"A\"])\n\n",
+                "contentStart": {
+                    "offset": 105,
+                    "line": 7,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 110,
+                            "line": 8,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 115,
+                            "line": 8,
+                            "column": 9
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 139,
+                            "line": 9,
+                            "column": 13
+                        },
+                        "end": {
+                            "offset": 145,
+                            "line": 9,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 8
+            },
+            {
+                "content": "\ndef numpy_values_prod(df):\n    return np.prod(df[\"A\"].values)\n\n",
+                "contentStart": {
+                    "offset": 155,
+                    "line": 11,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 160,
+                            "line": 12,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 165,
+                            "line": 12,
+                            "column": 9
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 196,
+                            "line": 13,
+                            "column": 13
+                        },
+                        "end": {
+                            "offset": 202,
+                            "line": 13,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 12
+            },
+            {
+                "content": "\ndef numpy_values_nanprod(df):\n    return np.nanprod(df[\"A\"].values)\n",
+                "contentStart": {
+                    "offset": 219,
+                    "line": 15,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 224,
+                            "line": 16,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 229,
+                            "line": 16,
+                            "column": 9
+                        }
+                    }
+                ],
+                "bestLineMatch": 16
+            },
+            {
+                "content": "    \"df_generator\": 'pd.DataFrame(np.random.randint(1, df_size, (df_size, 2)), columns=list(\"AB\"))',\n    \"functions_to_evaluate\": [numpy_values_prod, numpy_values_nanprod, pandas_prod, numpy_prod],\n    \"title\": \"Pandas Prod vs Numpy Prod\",\n}\n",
+                "contentStart": {
+                    "offset": 301,
+                    "line": 21,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 432,
+                            "line": 22,
+                            "column": 30
+                        },
+                        "end": {
+                            "offset": 437,
+                            "line": 22,
+                            "column": 35
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 451,
+                            "line": 22,
+                            "column": 49
+                        },
+                        "end": {
+                            "offset": 456,
+                            "line": 22,
+                            "column": 54
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 486,
+                            "line": 22,
+                            "column": 84
+                        },
+                        "end": {
+                            "offset": 491,
+                            "line": 22,
+                            "column": 89
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 528,
+                            "line": 23,
+                            "column": 29
+                        },
+                        "end": {
+                            "offset": 533,
+                            "line": 23,
+                            "column": 34
+                        }
+                    }
+                ],
+                "bestLineMatch": 22
+            },
+            {
+                "content": "from Benchmarker import Benchmarker\nimport numpy as np\n\n",
+                "contentStart": {
+                    "offset": 0,
+                    "line": 0,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 43,
+                            "line": 1,
+                            "column": 7
+                        },
+                        "end": {
+                            "offset": 48,
+                            "line": 1,
+                            "column": 12
+                        }
+                    }
+                ],
+                "bestLineMatch": 1
+            },
+            {
+                "content": "def pandas_prod(df):\n    return df[\"A\"].prod()\n\n",
+                "contentStart": {
+                    "offset": 57,
+                    "line": 4,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 96,
+                            "line": 5,
+                            "column": 18
+                        },
+                        "end": {
+                            "offset": 102,
+                            "line": 5,
+                            "column": 24
+                        }
+                    }
+                ],
+                "bestLineMatch": 5
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "chaospy/quadrature/utils.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 24,
+                    "line": 0,
+                    "column": 24
+                },
+                "end": {
+                    "offset": 27,
+                    "line": 0,
+                    "column": 27
+                }
+            }
+        ],
+        "repositoryID": 40569339,
+        "repository": "github.com/jonathf/chaospy",
+        "repoStars": 480,
+        "repoLastFetched": "2026-10-08T01:58:20.393394Z",
+        "branches": [
+            ""
+        ],
+        "commit": "ec8cd460bf1440eca4b409d996cfdb104d24ae06",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "    Returns:\n        (numpy.array):\n            Matrix of combinations with\n            ``shape == (numpy.prod(N), numpy.sum(M))``.\n\n",
+                "contentStart": {
+                    "offset": 464,
+                    "line": 17,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 486,
+                            "line": 18,
+                            "column": 9
+                        },
+                        "end": {
+                            "offset": 491,
+                            "line": 18,
+                            "column": 14
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 564,
+                            "line": 20,
+                            "column": 24
+                        },
+                        "end": {
+                            "offset": 569,
+                            "line": 20,
+                            "column": 29
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 569,
+                            "line": 20,
+                            "column": 29
+                        },
+                        "end": {
+                            "offset": 575,
+                            "line": 20,
+                            "column": 35
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 579,
+                            "line": 20,
+                            "column": 39
+                        },
+                        "end": {
+                            "offset": 584,
+                            "line": 20,
+                            "column": 44
+                        }
+                    }
+                ],
+                "bestLineMatch": 20
+            },
+            {
+                "content": "\n    size = numpy.prod(shapes, 0)[0] * numpy.sum(shapes, 0)[1]\n\n",
+                "contentStart": {
+                    "offset": 903,
+                    "line": 32,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 915,
+                            "line": 33,
+                            "column": 11
+                        },
+                        "end": {
+                            "offset": 920,
+                            "line": 33,
+                            "column": 16
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 920,
+                            "line": 33,
+                            "column": 16
+                        },
+                        "end": {
+                            "offset": 926,
+                            "line": 33,
+                            "column": 22
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 942,
+                            "line": 33,
+                            "column": 38
+                        },
+                        "end": {
+                            "offset": 947,
+                            "line": 33,
+                            "column": 43
+                        }
+                    }
+                ],
+                "bestLineMatch": 33
+            },
+            {
+                "content": "    abscissas = abscissas.T.reshape(dim, -1)\n    weights = numpy.prod(weights, -1)\n\n",
+                "contentStart": {
+                    "offset": 2172,
+                    "line": 76,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2231,
+                            "line": 77,
+                            "column": 14
+                        },
+                        "end": {
+                            "offset": 2236,
+                            "line": 77,
+                            "column": 19
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2236,
+                            "line": 77,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 2242,
+                            "line": 77,
+                            "column": 25
+                        }
+                    }
+                ],
+                "bestLineMatch": 77
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "tests/numpy/product.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 19,
+                    "line": 0,
+                    "column": 19
+                },
+                "end": {
+                    "offset": 22,
+                    "line": 0,
+                    "column": 22
+                }
+            }
+        ],
+        "repositoryID": 40148386,
+        "repository": "github.com/naitoh/py2rb",
+        "repoStars": 135,
+        "repoLastFetched": "2026-10-08T00:14:07.765519Z",
+        "branches": [
+            ""
+        ],
+        "commit": "0d2fbc5a86b82707a1d83241a21af6b2cc22c0b8",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "import numpy as np\nx = np.prod([1.,2.])\nprint(x)\nx = np.prod([[1.,2.],[3.,4.]])\nprint(x)\nx = np.prod([1.,2.], dtype= np.int32)\nprint(int(x))\nx = np.prod([1.,2.], None, np.int32)\nprint(int(x))\nx = np.prod([1.,2.], None, dtype= np.int32)\nprint(int(x))\nx = np.prod(dtype= np.int32, a=[1.,2.])\nprint(int(x))\nx = np.prod([[1.,2.],[3.,4.]], axis=0)\nprint(list(x))\nx = np.prod([[1.,2.],[3.,4.]], axis=1)\nprint(list(x))\nx = np.prod([3.,4.], keepdims=True)\nprint(list(x))\n",
+                "contentStart": {
+                    "offset": 0,
+                    "line": 0,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 23,
+                            "line": 1,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 31,
+                            "line": 1,
+                            "column": 12
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 53,
+                            "line": 3,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 61,
+                            "line": 3,
+                            "column": 12
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 93,
+                            "line": 5,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 101,
+                            "line": 5,
+                            "column": 12
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 145,
+                            "line": 7,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 153,
+                            "line": 7,
+                            "column": 12
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 196,
+                            "line": 9,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 204,
+                            "line": 9,
+                            "column": 12
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 254,
+                            "line": 11,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 262,
+                            "line": 11,
+                            "column": 12
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 308,
+                            "line": 13,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 316,
+                            "line": 13,
+                            "column": 12
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 362,
+                            "line": 15,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 370,
+                            "line": 15,
+                            "column": 12
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 416,
+                            "line": 17,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 424,
+                            "line": 17,
+                            "column": 12
+                        }
+                    }
+                ],
+                "bestLineMatch": 1
+            },
+            {
+                "content": "a = [3.,4.]\nx = np.prod(a, dtype= np.int32)\nprint(int(x))\n",
+                "contentStart": {
+                    "offset": 463,
+                    "line": 19,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 479,
+                            "line": 20,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 487,
+                            "line": 20,
+                            "column": 12
+                        }
+                    }
+                ],
+                "bestLineMatch": 20
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "repository": "github.com/tolstikhin/wae",
+        "commit": "63515656201eb6e3c3f32f6d38267401ed8ade8f",
+        "path": "wae.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/hansbuehler/deephedging",
+        "commit": "fe53fd9a7e402d4ba18bd5b9ec704e0361554f7c",
+        "path": "gym.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/real-stanford/semantic-abstraction",
+        "commit": "e76495e9ad49db75649394ac466fd3fec057c5b6",
+        "path": "net.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/dongwookim-ml/MMSB",
+        "commit": "d65cb7dd2dbbd26214600c968fb4bfed5b34c6c2",
+        "path": "mmsb.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/tolstikhin/adagan",
+        "commit": "746bd8e6a5277a3a95463a66f4e631e1b48fad48",
+        "path": "pot.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/nacro711072/MFPCA",
+        "commit": "02a3b9b8d83eb73969a82791d68cca31b6f34345",
+        "path": "lpr.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/georglind/babusca",
+        "commit": "e61e21e34f7c1887bbdef1b5b82abe698845b7f1",
+        "path": "g2.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/jbuckman/dmdp-donutworld",
+        "commit": "1b59ac59c6eb4935a9e2c00ea097bf0d2a14a8e0",
+        "path": "nn.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/c-f-h/aaa",
+        "commit": "ec23e63ac6c0459f89217c2970ef4c138e6615f4",
+        "path": "aaa.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/craigiedon/CarlaStuff",
+        "commit": "1e71eba5581766cc464ab9f89a6aca1e38302512",
+        "path": "stl.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/tolstikhin/wae",
+        "commit": "63515656201eb6e3c3f32f6d38267401ed8ade8f",
+        "path": "ops.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/dwierichs/General-Parameter-Shift-Rules",
+        "commit": "54a8f9a151af2eb67e48f788f5340b9acd9cb136",
+        "path": "lib.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/sagarverma/Granular_AI_Final",
+        "commit": "7ef3228566d5802f21034d2f56e51f943c6a0b46",
+        "path": "CAE.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/vahurvar/arbiter-xor-puf",
+        "commit": "82f52cd8b289b988b647e4e0675020e54fdb584a",
+        "path": "PUF.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/morning-dews/PGMA_tensorflow",
+        "commit": "a25240eb59ed695ecc41abd40eebb25986c6f14c",
+        "path": "wae.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/mmetcalf14/QITE",
+        "commit": "1bc9793691343807dbff6bfbfc5cbc9a1addaaf7",
+        "path": "mf.py",
+        "source": "github"
+    }
+]

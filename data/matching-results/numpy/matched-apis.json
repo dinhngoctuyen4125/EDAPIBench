@@ -1,0 +1,5 @@
+{
+    "numpy.prod": 32,
+    "numpy.cumprod": 25,
+    "numpy.all": 22
+}

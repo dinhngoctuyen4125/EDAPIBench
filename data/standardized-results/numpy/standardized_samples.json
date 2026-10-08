@@ -1,0 +1,204 @@
+[
+    {
+        "function": "print(np.cumsum(l_2d, axis=0))\n# [[1 2 3]\n#  [5 7 9]]\n\nprint(np.cumsum(l_2d, axis=1))\n# [[ 1  3  6]\n#  [ 4  9 15]]\n\nl_2d_error = [[1, 2, 3], [4, 5]]\n\nprint(np.cumsum(l_2d_error))\n# [list([1, 2, 3]) list([1, 2, 3, 4, 5])]\n# \n# /usr/local/lib/python3.8/site-packages/numpy/core/_asarray.py:83: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray\n#   return array(a, dtype, copy=False, order=order)\n\nprint(np.cumprod(a_1d))",
+        "reference dict": {},
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.prod": "numpy.prod",
+            "np.all": "numpy.all",
+            "numpy.cumproduct": "numpy.cumproduct",
+            "np.cumproduct": "numpy.cumproduct",
+            "cumproduct": "numpy.cumproduct"
+        },
+        "probing input": "print(np.cumsum(l_2d, axis=0))\n# [[1 2 3]\n#  [5 7 9]]\n\nprint(np.cumsum(l_2d, axis=1))\n# [[ 1  3  6]\n#  [ 4  9 15]]\n\nl_2d_error = [[1, 2, 3], [4, 5]]\n\nprint(np.cumsum(l_2d_error))\n# [list([1, 2, 3]) list([1, 2, 3, 4, 5])]\n# \n# /usr/local/lib/python3.8/site-packages/numpy/core/_asarray.py:83: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray\n#   return array(a, dtype, copy=False, order=order)\n\n",
+        "deprecated api": [
+            "numpy.cumproduct"
+        ],
+        "replacement api": "numpy.cumprod",
+        "expected call": "np.cumprod",
+        "category": "up-to-dated",
+        "reference": "print(np.cumprod(a_1d))"
+    },
+    {
+        "function": "    def fix_schedule_after_reload(self, schedule):\n        self.schedule = schedule\n        self.random_stream = False\n        # if all iterations are -1 we have random schedule\n        if numpy.all([ii == -1 for ii in schedule.values()]):\n            self.r_stream_id = numpy.random.randint(0, len(self.cgs), 2000000)\n            self.random_stream = True",
+        "reference dict": {},
+        "alias dict": {
+            "numpy.cumprod": "numpy.cumprod",
+            "numpy.prod": "numpy.prod",
+            "numpy.all": "numpy.all",
+            "numpy.alltrue": "numpy.alltrue",
+            "np.alltrue": "numpy.alltrue",
+            "alltrue": "numpy.alltrue"
+        },
+        "probing input": "    def fix_schedule_after_reload(self, schedule):\n        self.schedule = schedule\n        self.random_stream = False\n        # if all iterations are -1 we have random schedule\n",
+        "deprecated api": [
+            "numpy.alltrue"
+        ],
+        "replacement api": "numpy.all",
+        "expected call": "numpy.all",
+        "category": "up-to-dated",
+        "reference": "if numpy.all([ii == -1 for ii in schedule.values()]):"
+    },
+    {
+        "function": "    def num_trainable_weights(self) -> int:\n        \"\"\" Returns the number of weights. The model must have been call()ed once \"\"\"\n        assert not self.agent is None, \"build() must be called first\"\n        weights = self.trainable_weights\n        return np.sum( [ np.prod( w.get_shape() ) for w in weights ] )",
+        "reference dict": {
+            "_log": "Logger"
+        },
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.prod": "numpy.prod",
+            "np.all": "numpy.all",
+            "numpy.product": "numpy.product",
+            "np.product": "numpy.product",
+            "product": "numpy.product"
+        },
+        "probing input": "    def num_trainable_weights(self) -> int:\n        \"\"\" Returns the number of weights. The model must have been call()ed once \"\"\"\n        assert not self.agent is None, \"build() must be called first\"\n        weights = self.trainable_weights\n",
+        "deprecated api": [
+            "numpy.product"
+        ],
+        "replacement api": "numpy.prod",
+        "expected call": "np.prod",
+        "category": "up-to-dated",
+        "reference": "return np.sum( [ np.prod( w.get_shape() ) for w in weights ] )"
+    },
+    {
+        "function": "def coherent_state_quasilocal(setup, chlsi, chlso, E=0, tau=0):\n    \"\"\"\n    g2(E, tau) correlation as a function of incoming energy, E, and\n    delay time, tau. Here specifically for quasi-local systems.\n\n    Parameters\n    ----------\n    se : Setup\n        Scattering setup object\n    chlsi : list\n        list of incoming channels (must be identical!)\n    chlso : list\n        list of outgoing channels\n    E : float or list\n        Two photon state energ(y/ies)\n    \"\"\"\n    # channels\n    # two incoming photons from same channel\n    assert chlsi[0] == chlsi[1], 'Photons in an incoming coherent state must all belong to the same channel.'\n\n    (i1, _) = chlsi\n    (o1, o2) = chlso\n\n    # numpy arraify\n    k0s, taus = np.atleast_1d(E / 2, tau)\n\n    # smatrix single photon\n    _, S00 = smatrix.one_particle(setup, i1, o1, k0s)\n    _, S11 = smatrix.one_particle(setup, i1, o2, k0s)\n\n    g2 = np.zeros((len(k0s), len(taus)), dtype=np.float64)\n    S2 = np.zeros((len(k0s), len(taus)), dtype=np.complex128)\n\n    for i, k0 in enumerate(k0s):\n\n        # eigen energies\n        E1 = setup.eigenenergies(1, phi=k0)\n        E2 = setup.eigenenergies(2, phi=k0)\n\n        # creation operator in n = 0-1 eigenbasis representation\n        A01_i = setup.transition(1, o1, 0, k0)\n        A12_j = setup.transition(2, o2, 1, k0)\n        A01_j = setup.transition(1, o2, 0, k0)\n\n        A21_0 = setup.transition(1, i1, 2, k0)\n        A10_0 = setup.transition(0, i1, 1, k0)\n\n        prefactor = 4 * np.pi ** 2 * np.prod([setup.gs[c] for c in chlsi + chlso])\n\n        op = (A12_j.dot(np.diag(1 / (2 * k0 - E2))).dot(A21_0)\n              - np.diag(1 / (k0 - E1)).dot(A10_0).dot(A01_j)) \\\n            .dot(A10_0 / (k0 - E1[:, None]))\n\n        S2[i, :] = prefactor * np.dot(A01_i * np.exp(-1j * (E1[None, :] - k0) * taus[:, None]), op)[:, 0]\n        g2[i, :] = np.abs(1 - S2[i, :] / (S00[i] * S11[i])) ** 2\n\n        # np.abs(1 - (prefactor/(S00[i]*S11[i])\n                        # * np.dot(A01_i*np.exp(-1j*(E1[None, :] - k0)*taus[:, None]), op))\n                   # )[:, 0]**2\n\n    return {'g2': g2,\n            'phi2': np.abs(np.tile(S00 * S11, (len(taus), 1)) - S2) ** 2,\n            'normalization': S11 * S00,\n            'phi2_irreducible': S2}",
+        "reference dict": {},
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.prod": "numpy.prod",
+            "np.all": "numpy.all",
+            "numpy.product": "numpy.product",
+            "np.product": "numpy.product",
+            "product": "numpy.product"
+        },
+        "probing input": "def coherent_state_quasilocal(setup, chlsi, chlso, E=0, tau=0):\n    \"\"\"\n    g2(E, tau) correlation as a function of incoming energy, E, and\n    delay time, tau. Here specifically for quasi-local systems.\n\n    Parameters\n    ----------\n    se : Setup\n        Scattering setup object\n    chlsi : list\n        list of incoming channels (must be identical!)\n    chlso : list\n        list of outgoing channels\n    E : float or list\n        Two photon state energ(y/ies)\n    \"\"\"\n    # channels\n    # two incoming photons from same channel\n    assert chlsi[0] == chlsi[1], 'Photons in an incoming coherent state must all belong to the same channel.'\n\n    (i1, _) = chlsi\n    (o1, o2) = chlso\n\n    # numpy arraify\n    k0s, taus = np.atleast_1d(E / 2, tau)\n\n    # smatrix single photon\n    _, S00 = smatrix.one_particle(setup, i1, o1, k0s)\n    _, S11 = smatrix.one_particle(setup, i1, o2, k0s)\n\n    g2 = np.zeros((len(k0s), len(taus)), dtype=np.float64)\n    S2 = np.zeros((len(k0s), len(taus)), dtype=np.complex128)\n\n    for i, k0 in enumerate(k0s):\n\n        # eigen energies\n        E1 = setup.eigenenergies(1, phi=k0)\n        E2 = setup.eigenenergies(2, phi=k0)\n\n        # creation operator in n = 0-1 eigenbasis representation\n        A01_i = setup.transition(1, o1, 0, k0)\n        A12_j = setup.transition(2, o2, 1, k0)\n        A01_j = setup.transition(1, o2, 0, k0)\n\n        A21_0 = setup.transition(1, i1, 2, k0)\n        A10_0 = setup.transition(0, i1, 1, k0)\n\n",
+        "deprecated api": [
+            "numpy.product"
+        ],
+        "replacement api": "numpy.prod",
+        "expected call": "np.prod",
+        "category": "up-to-dated",
+        "reference": "prefactor = 4 * np.pi ** 2 * np.prod([setup.gs[c] for c in chlsi + chlso])"
+    },
+    {
+        "function": "def fock_state_local(setup, chlsi, chlso, E, dE, tau=0):\n    \"\"\"\n    Compute g^2 correlation function for a general two-photon state.\n\n    Parameters\n    ----------\n    se : scattering.Model\n        A given scattering model\n    chlsi : list\n        List of incoming two-photon state channel indices.\n    chlso : list\n        List of outgoing two-photon state channel indices.\n    E : float\n        Total two-photon energy\n    dE : float\n        Energy difference between the two photons.\n    tau : float\n        Time\n    \"\"\"\n    # channel indices\n    (i1, i2) = chlsi\n    (o1, o2) = chlso\n\n    # single photon energies\n    k0, q0 = .5 * E, .5 * dE\n    k1, k2 = k0 + q0, k0 - q0\n\n    # times\n    taus = np.atleast_1d(tau)\n\n    _, S11 = smatrix.one_particle(setup, i1, o1, np.array([k1]))\n    _, S22 = smatrix.one_particle(setup, i2, o2, np.array([k2]))\n\n    _, S12 = smatrix.one_particle(setup, i1, o2, np.array([k1]))\n    _, S21 = smatrix.one_particle(setup, i2, o1, np.array([k2]))\n\n    g2a = S11 * S22 * np.exp(-1j * q0 * taus) + S21 * S12 * np.exp(1j * q0 * taus)\n\n    # eigen energies\n    E1, E2 = [setup.eigenenergies(nb) for nb in (1, 2)]\n\n    # creation operator in n = 0-1 eigenbasis representation\n    A10, A01, A21, A12 = transitions(setup)\n\n    prefactor = (2 * np.pi) ** 2 * np.prod([setup.gs[c] for c in chlsi + chlso])\n\n    At = A01[o1] * np.exp(-1j * (E1[None, :] - k0) * taus[:, None])\n\n    g2b = At.dot(A12[o2]).dot(np.diag(1 / (E - E2))).dot(A21[i2]).dot(A10[i1] / (k1 - E1[:, None])) \\\n        + At.dot(A12[o2]).dot(np.diag(1 / (E - E2))).dot(A21[i1]).dot(A10[i2] / (k2 - E1[:, None])) \\\n        - (At / (k2 - E1)).dot(A10[i2]).dot(A01[o2]).dot(A10[i1] / (k1 - E1[:, None])) \\\n        - (At / (k1 - E1)).dot(A10[i1]).dot(A01[o2]).dot(A10[i2] / (k2 - E1[:, None]))\n\n    g2 = np.abs(g2a - prefactor * g2b.T)[:][0] ** 2\n    # normalization\n    if o2 == o1:\n        g1ig1j = g1(setup, chlsi, k0, q0, o1) ** 2\n    else:\n        g1ig1j = g1(setup, chlsi, k0, q0, o1) * g1(setup, chlsi, k0, q0, o2)\n\n    # return\n    return g2 / np.abs(g1ig1j[0]), g2, g1ig1j[0]",
+        "reference dict": {},
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.prod": "numpy.prod",
+            "np.all": "numpy.all",
+            "numpy.product": "numpy.product",
+            "np.product": "numpy.product",
+            "product": "numpy.product"
+        },
+        "probing input": "def fock_state_local(setup, chlsi, chlso, E, dE, tau=0):\n    \"\"\"\n    Compute g^2 correlation function for a general two-photon state.\n\n    Parameters\n    ----------\n    se : scattering.Model\n        A given scattering model\n    chlsi : list\n        List of incoming two-photon state channel indices.\n    chlso : list\n        List of outgoing two-photon state channel indices.\n    E : float\n        Total two-photon energy\n    dE : float\n        Energy difference between the two photons.\n    tau : float\n        Time\n    \"\"\"\n    # channel indices\n    (i1, i2) = chlsi\n    (o1, o2) = chlso\n\n    # single photon energies\n    k0, q0 = .5 * E, .5 * dE\n    k1, k2 = k0 + q0, k0 - q0\n\n    # times\n    taus = np.atleast_1d(tau)\n\n    _, S11 = smatrix.one_particle(setup, i1, o1, np.array([k1]))\n    _, S22 = smatrix.one_particle(setup, i2, o2, np.array([k2]))\n\n    _, S12 = smatrix.one_particle(setup, i1, o2, np.array([k1]))\n    _, S21 = smatrix.one_particle(setup, i2, o1, np.array([k2]))\n\n    g2a = S11 * S22 * np.exp(-1j * q0 * taus) + S21 * S12 * np.exp(1j * q0 * taus)\n\n    # eigen energies\n    E1, E2 = [setup.eigenenergies(nb) for nb in (1, 2)]\n\n    # creation operator in n = 0-1 eigenbasis representation\n    A10, A01, A21, A12 = transitions(setup)\n\n",
+        "deprecated api": [
+            "numpy.product"
+        ],
+        "replacement api": "numpy.prod",
+        "expected call": "np.prod",
+        "category": "up-to-dated",
+        "reference": "prefactor = (2 * np.pi) ** 2 * np.prod([setup.gs[c] for c in chlsi + chlso])"
+    },
+    {
+        "function": "def phi(setup, k0, q0, i, j, i1, i2):\n\n    E1 = setup.eigenenergies(1)[:, None]\n    E2 = setup.eigenenergies(2)\n\n    A10, A01, A21, A12 = transitions(setup)\n\n    return -2 * np.pi * 1j * np.prod([setup.gs[c] for c in [i, j, i1, i2]]) * \\\n        A01[i].T * (\n            (\n                A12[j]\n                .dot(np.diag(1 / (2 * k0 - E2)))\n                .dot(A21[i2])\n                -\n                (A10[i2] / (k0 - q0 - E1)).dot(A01[j])\n            ).dot(\n                A10[i1] / (k0 + q0 - E1)\n            )\n            +\n            (\n                A12[j]\n                .dot(np.diag(1 / (2 * k0 - E2)))\n                .dot(A21[i1])\n                -\n                (A10[i1] / (k0 + q0 - E1)).dot(A01[j])\n            ).dot(\n                A10[i2] / (k0 - q0 - E1)\n            )\n        )",
+        "reference dict": {},
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.prod": "numpy.prod",
+            "np.all": "numpy.all",
+            "numpy.product": "numpy.product",
+            "np.product": "numpy.product",
+            "product": "numpy.product"
+        },
+        "probing input": "def phi(setup, k0, q0, i, j, i1, i2):\n\n    E1 = setup.eigenenergies(1)[:, None]\n    E2 = setup.eigenenergies(2)\n\n    A10, A01, A21, A12 = transitions(setup)\n\n",
+        "deprecated api": [
+            "numpy.product"
+        ],
+        "replacement api": "numpy.prod",
+        "expected call": "np.prod",
+        "category": "up-to-dated",
+        "reference": "return -2 * np.pi * 1j * np.prod([setup.gs[c] for c in [i, j, i1, i2]]) * \\"
+    },
+    {
+        "function": "    def __init__(self, name, in_size, out_shape, layers=1, hidden_size=32, internal_nonlinearity=None, final_nonlinearity=None, old_ema_rate=False):\n        self.name = name\n        self.in_size = in_size\n        self.out_shape = out_shape\n        self.out_size = int(np.prod(out_shape))\n        self.layers = layers\n        self.hidden_dim = hidden_size\n        self.internal_nonlinearity = tf.nn.relu if internal_nonlinearity is None else internal_nonlinearity\n        self.final_nonlinearity = (lambda x:x) if final_nonlinearity is None else final_nonlinearity\n        self.old_ema_rate = old_ema_rate\n        self.keep_old = old_ema_rate is not False\n\n        self.weights = [None] * layers\n        self.biases = [None] * layers\n        if self.keep_old:\n            self.old_weights = [None] * layers\n            self.old_biases = [None] * layers\n            self.old_init_ops = []\n            self.old_ema_ops = []\n\n        self.params_list = []\n        self.trainable_params_list = []\n\n        with tf.variable_scope(name):\n            # main trainable parameters of ensemble\n            for layer_i in range(self.layers):\n                in_size = self.hidden_dim\n                out_size = self.hidden_dim\n                if layer_i == 0: in_size = self.in_size\n                if layer_i == self.layers - 1: out_size = self.out_size\n                self.weights[layer_i] = tf.get_variable(\"weights%d\" % layer_i, [in_size, out_size], initializer=tf.contrib.layers.xavier_initializer())\n                self.biases[layer_i] = tf.get_variable(\"bias%d\" % layer_i, [1, out_size], initializer=tf.initializers.zeros())\n                self.params_list += [self.weights[layer_i], self.biases[layer_i]]\n                self.trainable_params_list += [self.weights[layer_i], self.biases[layer_i]]\n\n            # old backups of the parameters, as estimated via EMA\n            if self.keep_old:\n                for layer_i in range(self.layers):\n                    in_size = self.hidden_dim\n                    out_size = self.hidden_dim\n                    if layer_i == 0: in_size = self.in_size\n                    if layer_i == self.layers - 1: out_size = self.out_size\n                    self.old_weights[layer_i] = tf.get_variable(\"old_weights%d\" % layer_i, [in_size, out_size], trainable=False)\n                    self.old_biases[layer_i] = tf.get_variable(\"old_bias%d\" % layer_i, [1, out_size], trainable=False)\n                    self.params_list += [self.old_weights[layer_i], self.old_biases[layer_i]]\n                    self.old_init_ops.append(tf.assign(self.old_weights[layer_i], self.weights[layer_i]))\n                    self.old_init_ops.append(tf.assign(self.old_biases[layer_i], self.biases[layer_i]))\n                    self.old_ema_ops.append(tf.assign(self.old_weights[layer_i], (1. - self.old_ema_rate) * self.old_weights[layer_i] + self.old_ema_rate * self.weights[layer_i]))\n                    self.old_ema_ops.append(tf.assign(self.old_biases[layer_i], (1. - self.old_ema_rate) * self.old_biases[layer_i] + self.old_ema_rate * self.biases[layer_i]))",
+        "reference dict": {},
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.all": "numpy.all",
+            "np.prod": "numpy.prod",
+            "numpy.product": "numpy.product",
+            "np.product": "numpy.product",
+            "product": "numpy.product"
+        },
+        "probing input": "    def __init__(self, name, in_size, out_shape, layers=1, hidden_size=32, internal_nonlinearity=None, final_nonlinearity=None, old_ema_rate=False):\n        self.name = name\n        self.in_size = in_size\n        self.out_shape = out_shape\n",
+        "deprecated api": [
+            "numpy.product"
+        ],
+        "replacement api": "numpy.prod",
+        "expected call": "np.prod",
+        "category": "up-to-dated",
+        "reference": "self.out_size = int(np.prod(out_shape))"
+    },
+    {
+        "function": "    def __init__(self, name, in_shape, out_shape, layers, internal_nonlinearity=None, final_nonlinearity=None, old_ema_rate=False):\n        self.name = name\n        self.in_shape = in_shape\n        self.out_shape = out_shape\n        self.out_size = int(np.prod(out_shape))\n        self.n_layers = len(layers)\n        self.layers = layers\n        self.internal_nonlinearity = tf.nn.leaky_relu if internal_nonlinearity is None else internal_nonlinearity\n        self.final_nonlinearity = (lambda x:x) if final_nonlinearity is None else final_nonlinearity\n        self.old_ema_rate = old_ema_rate\n        self.keep_old = old_ema_rate is not False\n\n        self.weights = [None] * self.n_layers\n        self.biases = [None] * self.n_layers\n        if self.keep_old:\n            self.old_weights = [None] * self.n_layers\n            self.old_biases = [None] * self.n_layers\n            self.old_init_ops = []\n            self.old_ema_ops = []\n\n        self.params_list = []\n        self.trainable_params_list = []\n\n        width, height, depth = self.in_shape\n        with tf.variable_scope(name):\n            # main trainable parameters of ensemble\n            for layer_i in range(self.n_layers):\n                in_depth = depth\n                filter_shape, stride, out_depth = self.layers[layer_i]\n                self.weights[layer_i] = tf.get_variable(\"weights%d\" % layer_i, filter_shape + [in_depth, out_depth], initializer=tf.contrib.layers.xavier_initializer_conv2d())\n                self.biases[layer_i] = tf.get_variable(\"bias%d\" % layer_i, [1, 1, 1, out_depth], initializer=tf.initializers.zeros())\n                self.params_list += [self.weights[layer_i], self.biases[layer_i]]\n                self.trainable_params_list += [self.weights[layer_i], self.biases[layer_i]]\n                width /= stride[0]\n                height /= stride[1]\n                depth = out_depth\n            self.final_weight = tf.get_variable(\"final_weight\", [width * height * depth, self.out_size], initializer=tf.contrib.layers.xavier_initializer())\n            self.final_bias = tf.get_variable(\"final_bias\", [1, self.out_size], initializer=tf.initializers.zeros())\n            self.params_list += [self.final_weight, self.final_bias]\n            self.trainable_params_list += [self.final_weight, self.final_bias]\n\n            # old backups of the parameters, as estimated via EMA\n            if self.keep_old:\n                width, height, depth = self.in_shape\n                for layer_i in range(self.n_layers):\n                    in_depth = depth\n                    filter_shape, stride, out_depth = self.layers[layer_i]\n                    self.old_weights[layer_i] = tf.get_variable(\"old_weights%d\" % layer_i, filter_shape + [in_depth, out_depth], trainable=False)\n                    self.old_biases[layer_i] = tf.get_variable(\"old_bias%d\" % layer_i, [1, 1, 1, out_depth], trainable=False)\n                    self.params_list += [self.old_weights[layer_i], self.old_biases[layer_i]]\n                    self.old_init_ops.append(tf.assign(self.old_weights[layer_i], self.weights[layer_i]))\n                    self.old_init_ops.append(tf.assign(self.old_biases[layer_i], self.biases[layer_i]))\n                    self.old_ema_ops.append(tf.assign(self.old_weights[layer_i], (1. - self.old_ema_rate) * self.old_weights[layer_i] + self.old_ema_rate * self.weights[layer_i]))\n                    self.old_ema_ops.append(tf.assign(self.old_biases[layer_i], (1. - self.old_ema_rate) * self.old_biases[layer_i] + self.old_ema_rate * self.biases[layer_i]))\n                    width /= stride[0]\n                    height /= stride[1]\n                    depth = out_depth\n                self.old_final_weight = tf.get_variable(\"old_final_weight\", [width * height * depth, self.out_size], trainable=False)\n                self.old_final_bias = tf.get_variable(\"old_final_bias\", [1, self.out_size], trainable=False)\n                self.params_list += [self.old_final_weight, self.old_final_bias]\n                self.old_init_ops.append(tf.assign(self.old_final_weight, self.final_weight))\n                self.old_init_ops.append(tf.assign(self.old_final_bias, self.final_bias))\n                self.old_ema_ops.append(tf.assign(self.old_final_weight, (1. - self.old_ema_rate) * self.old_final_weight + self.old_ema_rate * self.final_weight))\n                self.old_ema_ops.append(tf.assign(self.old_final_bias, (1. - self.old_ema_rate) * self.old_final_bias + self.old_ema_rate * self.final_bias))",
+        "reference dict": {},
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.all": "numpy.all",
+            "np.prod": "numpy.prod",
+            "numpy.product": "numpy.product",
+            "np.product": "numpy.product",
+            "product": "numpy.product"
+        },
+        "probing input": "    def __init__(self, name, in_shape, out_shape, layers, internal_nonlinearity=None, final_nonlinearity=None, old_ema_rate=False):\n        self.name = name\n        self.in_shape = in_shape\n        self.out_shape = out_shape\n",
+        "deprecated api": [
+            "numpy.product"
+        ],
+        "replacement api": "numpy.prod",
+        "expected call": "np.prod",
+        "category": "up-to-dated",
+        "reference": "self.out_size = int(np.prod(out_shape))"
+    },
+    {
+        "function": "    def __init__(self, name, in_size, out_shape, layers, internal_nonlinearity=None, final_nonlinearity=None, old_ema_rate=False):\n        self.name = name\n        self.in_size = in_size\n        self.out_shape = out_shape\n        self.out_size = int(np.prod(out_shape))\n        self.n_layers = len(layers)\n        self.layers = layers\n        self.internal_nonlinearity = tf.nn.leaky_relu if internal_nonlinearity is None else internal_nonlinearity\n        self.final_nonlinearity = (lambda x:x) if final_nonlinearity is None else final_nonlinearity\n        self.old_ema_rate = old_ema_rate\n        self.keep_old = old_ema_rate is not False\n\n        self.weights = [None] * self.n_layers\n        self.biases = [None] * self.n_layers\n        if self.keep_old:\n            self.old_weights = [None] * self.n_layers\n            self.old_biases = [None] * self.n_layers\n            self.old_init_ops = []\n            self.old_ema_ops = []\n\n        self.params_list = []\n        self.trainable_params_list = []\n\n        width = self.out_shape[0] / np.prod([stride[0] for _, stride, _ in self.layers])\n        height = self.out_shape[1] / np.prod([stride[1] for _, stride, _ in self.layers])\n        depth = self.layers[0][2]\n        with tf.variable_scope(name):\n            # main trainable parameters of ensemble\n            self.initial_weight = tf.get_variable(\"initial_weight\", [self.in_size, width * height * depth], initializer=tf.contrib.layers.xavier_initializer())\n            self.initial_bias = tf.get_variable(\"initial_bias\", [1, width * height * depth], initializer=tf.initializers.zeros())\n            self.params_list += [self.initial_weight, self.initial_bias]\n            self.trainable_params_list += [self.initial_weight, self.initial_bias]\n            for layer_i in range(self.n_layers):\n                filter_shape, stride, in_depth = self.layers[layer_i]\n                out_depth = self.layers[layer_i+1][2] if layer_i+1 < self.n_layers else self.out_shape[2]\n                self.weights[layer_i] = tf.get_variable(\"weights%d\" % layer_i, filter_shape + [out_depth, in_depth], initializer=tf.contrib.layers.xavier_initializer_conv2d())\n                self.biases[layer_i] = tf.get_variable(\"bias%d\" % layer_i, [1, 1, 1, out_depth], initializer=tf.initializers.zeros())\n                self.params_list += [self.weights[layer_i], self.biases[layer_i]]\n                self.trainable_params_list += [self.weights[layer_i], self.biases[layer_i]]\n                width *= stride[0]\n                height *= stride[1]\n\n            # old backups of the parameters, as estimated via EMA\n            if self.keep_old:\n                width = self.out_shape[0] / np.prod([stride[0] for _, stride, _ in self.layers])\n                height = self.out_shape[1] / np.prod([stride[1] for _, stride, _ in self.layers])\n                depth = self.layers[0][2]\n                self.old_initial_weight = tf.get_variable(\"old_initial_weight\", [self.in_size, width * height * depth], trainable=False)\n                self.old_initial_bias = tf.get_variable(\"old_initial_bias\", [1, width * height * depth], trainable=False)\n                self.params_list += [self.old_initial_weight, self.old_initial_bias]\n                self.old_init_ops.append(tf.assign(self.old_initial_weight, self.initial_weight))\n                self.old_init_ops.append(tf.assign(self.old_initial_bias, self.initial_bias))\n                self.old_ema_ops.append(tf.assign(self.old_initial_weight, (1. - self.old_ema_rate) * self.old_initial_weight + self.old_ema_rate * self.initial_weight))\n                self.old_ema_ops.append(tf.assign(self.old_initial_bias, (1. - self.old_ema_rate) * self.old_initial_bias + self.old_ema_rate * self.initial_bias))\n                for layer_i in range(self.n_layers):\n                    filter_shape, stride, in_depth = self.layers[layer_i]\n                    out_depth = self.layers[layer_i + 1][2] if layer_i + 1 < self.n_layers else self.out_shape[2]\n                    self.old_weights[layer_i] = tf.get_variable(\"old_weights%d\" % layer_i, filter_shape + [out_depth, in_depth], trainable=False)\n                    self.old_biases[layer_i] = tf.get_variable(\"old_bias%d\" % layer_i, [1, 1, 1, out_depth], trainable=False)\n                    self.params_list += [self.old_weights[layer_i], self.old_biases[layer_i]]\n                    self.old_init_ops.append(tf.assign(self.old_weights[layer_i], self.weights[layer_i]))\n                    self.old_init_ops.append(tf.assign(self.old_biases[layer_i], self.biases[layer_i]))\n                    self.old_ema_ops.append(tf.assign(self.old_weights[layer_i], (1. - self.old_ema_rate) * self.old_weights[layer_i] + self.old_ema_rate * self.weights[layer_i]))\n                    self.old_ema_ops.append(tf.assign(self.old_biases[layer_i], (1. - self.old_ema_rate) * self.old_biases[layer_i] + self.old_ema_rate * self.biases[layer_i]))\n                    width *= stride[0]\n                    height *= stride[1]",
+        "reference dict": {},
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.all": "numpy.all",
+            "np.prod": "numpy.prod",
+            "numpy.product": "numpy.product",
+            "np.product": "numpy.product",
+            "product": "numpy.product"
+        },
+        "probing input": "    def __init__(self, name, in_size, out_shape, layers, internal_nonlinearity=None, final_nonlinearity=None, old_ema_rate=False):\n        self.name = name\n        self.in_size = in_size\n        self.out_shape = out_shape\n",
+        "deprecated api": [
+            "numpy.product"
+        ],
+        "replacement api": "numpy.prod",
+        "expected call": "np.prod",
+        "category": "up-to-dated",
+        "reference": "self.out_size = int(np.prod(out_shape))"
+    },
+    {
+        "function": "    def __call__(self, x, use_old=False, stop_params_gradient=False, add_x_channel_dim=True):\n        if add_x_channel_dim: x = tf.expand_dims(x, -1)\n\n        # decide whether to use old weights\n        if use_old:\n            assert self.keep_old\n            weights = [tf.stop_gradient(weight) for weight in self.old_weights]\n            biases = [tf.stop_gradient(bias) for bias in self.old_biases]\n            initial_weight = tf.stop_gradient(self.old_initial_weight)\n            initial_bias = tf.stop_gradient(self.old_initial_bias)\n        elif stop_params_gradient:\n            weights = [tf.stop_gradient(weight) for weight in self.weights]\n            biases = [tf.stop_gradient(bias) for bias in self.biases]\n            initial_weight = tf.stop_gradient(self.initial_weight)\n            initial_bias = tf.stop_gradient(self.initial_bias)\n        else:\n            weights = self.weights\n            biases = self.biases\n            initial_weight = self.initial_weight\n            initial_bias = self.initial_bias\n\n        # reshape input\n        batch_shape = tf.shape(x)[:-1]\n        assert x.shape.as_list()[-1] == self.in_size\n        x = tf.reshape(x, [-1] + [self.in_size])\n\n        # main network\n        h = x\n        width = self.out_shape[0] / np.prod([stride[0] for _, stride, _ in self.layers])\n        height = self.out_shape[1] / np.prod([stride[1] for _, stride, _ in self.layers])\n        depth = self.layers[0][2]\n        h = tf.matmul(h, initial_weight) + initial_bias\n        h = tf.reshape(h, [-1, width, height, depth])\n        for layer_i in range(self.n_layers):\n            filter_shape, stride, in_depth = self.layers[layer_i]\n            out_depth = self.layers[layer_i + 1][2] if layer_i + 1 < self.n_layers else self.out_shape[2]\n            h = self.internal_nonlinearity(tf.nn.conv2d_transpose(h, weights[layer_i], output_shape=(tf.shape(h)[0], width*stride[0], height*stride[1], out_depth), strides=[1]+stride+[1]) + biases[layer_i])\n            width *= stride[0]\n            height *= stride[1]\n\n        # reshape to original batching\n        h = tf.reshape(h, tf.concat([batch_shape, tf.constant(self.out_shape, dtype=tf.int32)], axis=0))\n        h = self.final_nonlinearity(h)\n\n        return h",
+        "reference dict": {},
+        "alias dict": {
+            "np.cumprod": "numpy.cumprod",
+            "np.all": "numpy.all",
+            "np.prod": "numpy.prod",
+            "numpy.product": "numpy.product",
+            "np.product": "numpy.product",
+            "product": "numpy.product"
+        },
+        "probing input": "    def __call__(self, x, use_old=False, stop_params_gradient=False, add_x_channel_dim=True):\n        if add_x_channel_dim: x = tf.expand_dims(x, -1)\n\n        # decide whether to use old weights\n        if use_old:\n            assert self.keep_old\n            weights = [tf.stop_gradient(weight) for weight in self.old_weights]\n            biases = [tf.stop_gradient(bias) for bias in self.old_biases]\n            initial_weight = tf.stop_gradient(self.old_initial_weight)\n            initial_bias = tf.stop_gradient(self.old_initial_bias)\n        elif stop_params_gradient:\n            weights = [tf.stop_gradient(weight) for weight in self.weights]\n            biases = [tf.stop_gradient(bias) for bias in self.biases]\n            initial_weight = tf.stop_gradient(self.initial_weight)\n            initial_bias = tf.stop_gradient(self.initial_bias)\n        else:\n            weights = self.weights\n            biases = self.biases\n            initial_weight = self.initial_weight\n            initial_bias = self.initial_bias\n\n        # reshape input\n        batch_shape = tf.shape(x)[:-1]\n        assert x.shape.as_list()[-1] == self.in_size\n        x = tf.reshape(x, [-1] + [self.in_size])\n\n        # main network\n        h = x\n",
+        "deprecated api": [
+            "numpy.product"
+        ],
+        "replacement api": "numpy.prod",
+        "expected call": "np.prod",
+        "category": "up-to-dated",
+        "reference": "width = self.out_shape[0] / np.prod([stride[0] for _, stride, _ in self.layers])"
+    }
+]

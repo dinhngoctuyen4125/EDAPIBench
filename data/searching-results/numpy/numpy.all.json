@@ -1,0 +1,1017 @@
+[
+    {
+        "type": "content",
+        "path": "keras/src/utils/numerical_utils_test.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 36,
+                    "line": 0,
+                    "column": 36
+                },
+                "end": {
+                    "offset": 39,
+                    "line": 0,
+                    "column": 39
+                }
+            }
+        ],
+        "repositoryID": 35755525,
+        "repository": "github.com/keras-team/keras",
+        "repoStars": 64351,
+        "repoLastFetched": "2026-10-08T03:34:39.065752Z",
+        "branches": [
+            ""
+        ],
+        "commit": "c12baa41a0f749b1c3d75c99bdb8b9ee8f47e56b",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "        self.assertTrue(backend.ops.is_tensor(out))\n        self.assertAllClose(backend.ops.convert_to_numpy(out), expected)\n\n    def test_normalize_numpy_axis_zero(self):\n        x = np.array(\n",
+                "contentStart": {
+                    "offset": 2490,
+                    "line": 72,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2593,
+                            "line": 73,
+                            "column": 51
+                        },
+                        "end": {
+                            "offset": 2598,
+                            "line": 73,
+                            "column": 56
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2639,
+                            "line": 75,
+                            "column": 23
+                        },
+                        "end": {
+                            "offset": 2644,
+                            "line": 75,
+                            "column": 28
+                        }
+                    }
+                ],
+                "bestLineMatch": 75
+            },
+            {
+                "content": "    @parameterized.parameters([-1, 0, None])\n    def test_normalize_numpy_1d_preserves_shape(self, axis):\n        x = np.array([3.0, 4.0])\n",
+                "contentStart": {
+                    "offset": 3112,
+                    "line": 96,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 3180,
+                            "line": 97,
+                            "column": 23
+                        },
+                        "end": {
+                            "offset": 3185,
+                            "line": 97,
+                            "column": 28
+                        }
+                    }
+                ],
+                "bestLineMatch": 97
+            },
+            {
+                "content": "import numpy as np\nfrom absl.testing import parameterized\n",
+                "contentStart": {
+                    "offset": 0,
+                    "line": 0,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 7,
+                            "line": 0,
+                            "column": 7
+                        },
+                        "end": {
+                            "offset": 12,
+                            "line": 0,
+                            "column": 12
+                        }
+                    }
+                ],
+                "bestLineMatch": 0
+            },
+            {
+                "content": "        self.assertTrue(\n            np.all(\n                negative_mask\n",
+                "contentStart": {
+                    "offset": 4519,
+                    "line": 135,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 4558,
+                            "line": 136,
+                            "column": 14
+                        },
+                        "end": {
+                            "offset": 4563,
+                            "line": 136,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 136
+            },
+            {
+                "content": "\n        # Test NumPy\n        out = numerical_utils.normalize(xnp, axis=-1, order=order)\n",
+                "contentStart": {
+                    "offset": 2221,
+                    "line": 64,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2237,
+                            "line": 65,
+                            "column": 15
+                        },
+                        "end": {
+                            "offset": 2242,
+                            "line": 65,
+                            "column": 20
+                        }
+                    }
+                ],
+                "bestLineMatch": 65
+            },
+            {
+                "content": "        xb = backend.random.uniform((3, 3), seed=1337)\n        xnp = backend.ops.convert_to_numpy(xb)\n\n",
+                "contentStart": {
+                    "offset": 1951,
+                    "line": 57,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2043,
+                            "line": 58,
+                            "column": 37
+                        },
+                        "end": {
+                            "offset": 2048,
+                            "line": 58,
+                            "column": 42
+                        }
+                    }
+                ],
+                "bestLineMatch": 58
+            },
+            {
+                "content": "        # Make sure there is only one 1 in a row\n        self.assertTrue(np.all(one_hot.sum(axis=-1) == 1))\n        # Get original labels back from one hots\n",
+                "contentStart": {
+                    "offset": 799,
+                    "line": 26,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 874,
+                            "line": 27,
+                            "column": 26
+                        },
+                        "end": {
+                            "offset": 879,
+                            "line": 27,
+                            "column": 31
+                        }
+                    }
+                ],
+                "bestLineMatch": 27
+            },
+            {
+                "content": "\n        positive_mask = backend.ops.convert_to_numpy(positive_mask)\n        negative_mask = backend.ops.convert_to_numpy(negative_mask)\n        self.assertEqual(positive_mask.shape, expected_shape)\n",
+                "contentStart": {
+                    "offset": 3753,
+                    "line": 113,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 3801,
+                            "line": 114,
+                            "column": 47
+                        },
+                        "end": {
+                            "offset": 3806,
+                            "line": 114,
+                            "column": 52
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 3869,
+                            "line": 115,
+                            "column": 47
+                        },
+                        "end": {
+                            "offset": 3874,
+                            "line": 115,
+                            "column": 52
+                        }
+                    }
+                ],
+                "bestLineMatch": 114
+            },
+            {
+                "content": "        )\n        positive_mask = backend.ops.convert_to_numpy(positive_mask)\n        negative_mask = backend.ops.convert_to_numpy(negative_mask)\n        self.assertEqual(positive_mask.shape, expected_shape)\n",
+                "contentStart": {
+                    "offset": 4822,
+                    "line": 144,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 4879,
+                            "line": 145,
+                            "column": 47
+                        },
+                        "end": {
+                            "offset": 4884,
+                            "line": 145,
+                            "column": 52
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 4947,
+                            "line": 146,
+                            "column": 47
+                        },
+                        "end": {
+                            "offset": 4952,
+                            "line": 146,
+                            "column": 52
+                        }
+                    }
+                ],
+                "bestLineMatch": 145
+            },
+            {
+                "content": "        )\n        positive_mask = backend.ops.convert_to_numpy(positive_mask)\n        negative_mask = backend.ops.convert_to_numpy(negative_mask)\n        expected_shape_diff_sizes = (len(query_labels), len(key_labels))\n",
+                "contentStart": {
+                    "offset": 5835,
+                    "line": 172,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 5892,
+                            "line": 173,
+                            "column": 47
+                        },
+                        "end": {
+                            "offset": 5897,
+                            "line": 173,
+                            "column": 52
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 5960,
+                            "line": 174,
+                            "column": 47
+                        },
+                        "end": {
+                            "offset": 5965,
+                            "line": 174,
+                            "column": 52
+                        }
+                    }
+                ],
+                "bestLineMatch": 173
+            },
+            {
+                "content": "        self.assertTrue(\n            np.all(positive_mask == expected_positive_mask_keep_diag)\n        )\n",
+                "contentStart": {
+                    "offset": 4414,
+                    "line": 132,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 4453,
+                            "line": 133,
+                            "column": 14
+                        },
+                        "end": {
+                            "offset": 4458,
+                            "line": 133,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 133
+            },
+            {
+                "content": "        self.assertTrue(\n            np.all(np.argmax(one_hot, -1).reshape(label.shape) == label)\n        )\n",
+                "contentStart": {
+                    "offset": 956,
+                    "line": 29,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 995,
+                            "line": 30,
+                            "column": 14
+                        },
+                        "end": {
+                            "offset": 1000,
+                            "line": 30,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 30
+            },
+            {
+                "content": "        self.assertTrue(\n            np.all(positive_mask == expected_positive_mask_with_remove_diag)\n        )\n",
+                "contentStart": {
+                    "offset": 5499,
+                    "line": 163,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 5538,
+                            "line": 164,
+                            "column": 14
+                        },
+                        "end": {
+                            "offset": 5543,
+                            "line": 164,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 164
+            },
+            {
+                "content": "        self.assertTrue(\n            np.all(np.logical_not(np.logical_and(positive_mask, negative_mask)))\n        )\n",
+                "contentStart": {
+                    "offset": 4014,
+                    "line": 118,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 4053,
+                            "line": 119,
+                            "column": 14
+                        },
+                        "end": {
+                            "offset": 4058,
+                            "line": 119,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 119
+            },
+            {
+                "content": "        self.assertTrue(\n            np.all(np.logical_not(np.logical_and(positive_mask, negative_mask)))\n        )\n",
+                "contentStart": {
+                    "offset": 5092,
+                    "line": 149,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 5131,
+                            "line": 150,
+                            "column": 14
+                        },
+                        "end": {
+                            "offset": 5136,
+                            "line": 150,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 150
+            },
+            {
+                "content": "        self.assertTrue(\n            np.all(np.logical_not(np.logical_and(positive_mask, negative_mask)))\n        )\n",
+                "contentStart": {
+                    "offset": 6200,
+                    "line": 178,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 6239,
+                            "line": 179,
+                            "column": 14
+                        },
+                        "end": {
+                            "offset": 6244,
+                            "line": 179,
+                            "column": 19
+                        }
+                    }
+                ],
+                "bestLineMatch": 179
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "numpy/typing/tests/data/fail/fromnumeric.pyi",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 40,
+                    "line": 0,
+                    "column": 40
+                },
+                "end": {
+                    "offset": 44,
+                    "line": 0,
+                    "column": 44
+                }
+            }
+        ],
+        "repositoryID": 54128,
+        "repository": "github.com/numpy/numpy",
+        "repoStars": 33047,
+        "repoLastFetched": "2026-10-08T03:24:03.583321Z",
+        "branches": [
+            ""
+        ],
+        "commit": "679e62001618881ffa16d4e4826f0435e97b242f",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "\nnp.all(a, axis=1.0)  # type: ignore[call-overload]\nnp.all(a, keepdims=1.0)  # type: ignore[call-overload]\nnp.all(a, out=1.0)  # type: ignore[call-overload]\n\n",
+                "contentStart": {
+                    "offset": 3375,
+                    "line": 90,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 3376,
+                            "line": 91,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 3383,
+                            "line": 91,
+                            "column": 7
+                        }
+                    }
+                ],
+                "bestLineMatch": 93
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "jumanji/environments/routing/multi_cvrp/env_test.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 48,
+                    "line": 0,
+                    "column": 48
+                },
+                "end": {
+                    "offset": 51,
+                    "line": 0,
+                    "column": 51
+                }
+            }
+        ],
+        "repositoryID": 58985145,
+        "repository": "github.com/instadeepai/jumanji",
+        "repoStars": 867,
+        "repoLastFetched": "2026-10-08T02:53:36.495777Z",
+        "branches": [
+            ""
+        ],
+        "commit": "be60de60db789cb708224523ced5271294584a6a",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "        # Check the order and step_count\n        assert np.all(state.order == 0)\n        assert np.all(state.step_count == 1)\n\n",
+                "contentStart": {
+                    "offset": 5805,
+                    "line": 143,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 5861,
+                            "line": 144,
+                            "column": 15
+                        },
+                        "end": {
+                            "offset": 5868,
+                            "line": 144,
+                            "column": 22
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 5901,
+                            "line": 145,
+                            "column": 15
+                        },
+                        "end": {
+                            "offset": 5908,
+                            "line": 145,
+                            "column": 22
+                        }
+                    }
+                ],
+                "bestLineMatch": 144
+            },
+            {
+                "content": "        assert np.array_equal(new_state.order[:, 1], new_actions)\n        assert np.all(new_state.step_count == 2)\n\n",
+                "contentStart": {
+                    "offset": 6452,
+                    "line": 161,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 6533,
+                            "line": 162,
+                            "column": 15
+                        },
+                        "end": {
+                            "offset": 6540,
+                            "line": 162,
+                            "column": 22
+                        }
+                    }
+                ],
+                "bestLineMatch": 162
+            },
+            {
+                "content": "        assert np.array_equal(new_state.order[:, 2], new_actions)\n        assert np.all(new_state.order[:, 2:] == 0)\n        assert np.all(new_state.step_count == 3)\n\n",
+                "contentStart": {
+                    "offset": 7128,
+                    "line": 178,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 7209,
+                            "line": 179,
+                            "column": 15
+                        },
+                        "end": {
+                            "offset": 7216,
+                            "line": 179,
+                            "column": 22
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 7260,
+                            "line": 180,
+                            "column": 15
+                        },
+                        "end": {
+                            "offset": 7267,
+                            "line": 180,
+                            "column": 22
+                        }
+                    }
+                ],
+                "bestLineMatch": 180
+            },
+            {
+                "content": "        # Check that the time windows are valid.\n        assert jax.numpy.all(0 < state.windows.start)\n        assert jax.numpy.all(state.windows.start < multicvrp_env._max_start_window)\n        assert jax.numpy.all(state.windows.end > state.windows.start)\n\n",
+                "contentStart": {
+                    "offset": 1970,
+                    "line": 53,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2038,
+                            "line": 54,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 2048,
+                            "line": 54,
+                            "column": 29
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2092,
+                            "line": 55,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 2102,
+                            "line": 55,
+                            "column": 29
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2176,
+                            "line": 56,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 2186,
+                            "line": 56,
+                            "column": 29
+                        }
+                    }
+                ],
+                "bestLineMatch": 54
+            },
+            {
+                "content": "        # Check that all the agents are at the depot.\n        assert np.all(new_state.vehicles.positions == 0)\n\n",
+                "contentStart": {
+                    "offset": 5344,
+                    "line": 131,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 5413,
+                            "line": 132,
+                            "column": 15
+                        },
+                        "end": {
+                            "offset": 5420,
+                            "line": 132,
+                            "column": 22
+                        }
+                    }
+                ],
+                "bestLineMatch": 132
+            },
+            {
+                "content": "        # # All vechicles are at the depot\n        assert jax.numpy.all(state.vehicles.positions == DEPOT_IDX)\n\n",
+                "contentStart": {
+                    "offset": 1768,
+                    "line": 47,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 1830,
+                            "line": 48,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 1840,
+                            "line": 48,
+                            "column": 29
+                        }
+                    }
+                ],
+                "bestLineMatch": 48
+            },
+            {
+                "content": "        # Check that the early_coefs and late_coefs are valid.\n        assert jax.numpy.all(multicvrp_env._early_coef_rand[0] <= state.coeffs.early)\n        assert jax.numpy.all(state.coeffs.early < multicvrp_env._early_coef_rand[1])\n        assert jax.numpy.all(multicvrp_env._late_coef_rand[0] <= state.coeffs.late)\n        assert jax.numpy.all(state.coeffs.late < multicvrp_env._late_coef_rand[1])\n\n",
+                "contentStart": {
+                    "offset": 2228,
+                    "line": 58,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2310,
+                            "line": 59,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 2320,
+                            "line": 59,
+                            "column": 29
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2396,
+                            "line": 60,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 2406,
+                            "line": 60,
+                            "column": 29
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2481,
+                            "line": 61,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 2491,
+                            "line": 61,
+                            "column": 29
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 2565,
+                            "line": 62,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 2575,
+                            "line": 62,
+                            "column": 29
+                        }
+                    }
+                ],
+                "bestLineMatch": 62
+            },
+            {
+                "content": "        # Initial position is at depot, so current capacity is max capacity\n        assert jax.numpy.all(state.vehicles.capacities == multicvrp_env._max_capacity)\n\n",
+                "contentStart": {
+                    "offset": 1604,
+                    "line": 44,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 1699,
+                            "line": 45,
+                            "column": 19
+                        },
+                        "end": {
+                            "offset": 1709,
+                            "line": 45,
+                            "column": 29
+                        }
+                    }
+                ],
+                "bestLineMatch": 45
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "tests/numpy/all.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 15,
+                    "line": 0,
+                    "column": 15
+                },
+                "end": {
+                    "offset": 18,
+                    "line": 0,
+                    "column": 18
+                }
+            }
+        ],
+        "repositoryID": 56172513,
+        "repository": "github.com/nanobowers/py2cr",
+        "repoStars": 70,
+        "repoLastFetched": "2026-10-08T02:48:43.876816Z",
+        "branches": [
+            ""
+        ],
+        "commit": "b7deb8c227cf43ce0e1bf7d638d5b4c00b7e9bdb",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "\nv = np.all([-1, 0, 4])\nprint(str(v).upper())\n",
+                "contentStart": {
+                    "offset": 273,
+                    "line": 13,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 278,
+                            "line": 14,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 285,
+                            "line": 14,
+                            "column": 11
+                        }
+                    }
+                ],
+                "bestLineMatch": 14
+            },
+            {
+                "content": "\nv = np.all([1.0 ,np.nan])\nprint(str(v).upper())\n",
+                "contentStart": {
+                    "offset": 319,
+                    "line": 16,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 324,
+                            "line": 17,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 331,
+                            "line": 17,
+                            "column": 11
+                        }
+                    }
+                ],
+                "bestLineMatch": 17
+            },
+            {
+                "content": "\nv = np.all([[True, False], [True, True]])\nprint(str(v).upper())\n",
+                "contentStart": {
+                    "offset": 35,
+                    "line": 2,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 40,
+                            "line": 3,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 47,
+                            "line": 3,
+                            "column": 11
+                        }
+                    }
+                ],
+                "bestLineMatch": 3
+            },
+            {
+                "content": "\"\"\" [True, False] => [1, 0] \"\"\"\nv = np.all([[True, False], [True, True]], axis=0)\nfor a in v:\n",
+                "contentStart": {
+                    "offset": 101,
+                    "line": 6,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 137,
+                            "line": 7,
+                            "column": 4
+                        },
+                        "end": {
+                            "offset": 144,
+                            "line": 7,
+                            "column": 11
+                        }
+                    }
+                ],
+                "bestLineMatch": 7
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "repository": "github.com/ahmedfgad/GeneticAlgorithmPython",
+        "commit": "8d54c62457f7c5ac21f6b190ee261a7f035f75db",
+        "path": "pygad/utils/engine.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/loli/medpy",
+        "commit": "d6abf41066cce75c84215a237a0be208e8294760",
+        "path": "medpy/filter/image.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/NOAA-PMEL/PyFerret",
+        "commit": "8e77eb6f650d3bf0b306cc192f4f432db3b5a8aa",
+        "path": "gcircle.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/nyu-dl/dl4mt-multi",
+        "commit": "32e1436a3311cdc18eaba680616d88c971107142",
+        "path": "mcg/stream.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/Becksteinlab/GromacsWrapper",
+        "commit": "d90b853863582987210e97dcc62a447ac5c38555",
+        "path": "gromacs/utilities.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/GalacticDynamics-Oxford/Agama",
+        "commit": "f302756b8af2b763db58e278e30478517dc8eea3",
+        "path": "py/example_mw_nsc.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/Hiroshiba/yukarin_autoreg",
+        "commit": "2a36de3d6d9a9d113c3bb1f81ffa000719ee80f2",
+        "path": "src_cython/check.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/modusdatascience/choldate",
+        "commit": "94fff3e55ef5e923c7b6d7efb50939cf2fdd7cec",
+        "path": "bin/example.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/spyking-circus/spyking-circus",
+        "commit": "bf16ba0991b9527bd3ab49c0d2638e08dad84088",
+        "path": "circus/whitening.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/SymJAX/SymJAX",
+        "commit": "d8778c2eb3254b478cef4f45d934bf921e695619",
+        "path": "symjax/tensor/base.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/spyking-circus/spyking-circus",
+        "commit": "bf16ba0991b9527bd3ab49c0d2638e08dad84088",
+        "path": "circus/clustering.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/MDAnalysis/GridDataFormats",
+        "commit": "4acc4c37f922190fb3055ad780e54e35603b26e6",
+        "path": "gridData/core.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/matthewearl/deep-anpr",
+        "commit": "db823ebe283f4e226a80dbbe4cb5b45867bf0485",
+        "path": "train.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/CIRADA-Tools/RM-Tools",
+        "commit": "bcfd15c1282d61a8be196d16e677b27516b9a680",
+        "path": "RMutils/mpfit.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/astraw/matplotlib-ancient",
+        "commit": "7272f102482941ada6e5fd874bdf7f185f420526",
+        "path": "unit/mlab_unit.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/thomasmesnard/DeepMind-Teaching-Machines-to-Read-and-Comprehend",
+        "commit": "8ad50e9f2562b1fd055939e8582f07e46f54b1ef",
+        "path": "data.py",
+        "source": "github"
+    }
+]

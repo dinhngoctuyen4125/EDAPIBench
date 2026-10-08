@@ -1,0 +1,101 @@
+[INFO] 2026-10-08 10:36:41,171 - Starting processing for library: numpy
+[INFO] 2026-10-08 10:36:41,172 - Loaded 3 APIs to search
+[INFO] 2026-10-08 10:36:41,176 - Starting processing for API: numpy.all
+[INFO] 2026-10-08 10:36:41,176 - Sourcegraph search URL: https://sourcegraph.com/.api/search/stream?q=context:global numpy.all( OR np.all( timeout:45s count:20 type:file lang:python &v=V3&t=keyword&sm=0&cm=t&max-line-len=5120
+[INFO] 2026-10-08 10:36:43,554 - Sourcegraph search URL: https://sourcegraph.com/.api/search/stream?q=context:global numpy .all( timeout:45s count:20 type:file lang:python &v=V3&t=keyword&sm=0&cm=t&max-line-len=5120
+[INFO] 2026-10-08 10:36:45,782 - Sourcegraph search completed, 4 valid results
+[INFO] 2026-10-08 10:36:45,783 - GitHub search keyword: numpy.all(
+[INFO] 2026-10-08 10:36:47,863 - GitHub total results for keyword numpy.all(: 26688
+[INFO] 2026-10-08 10:36:58,824 - GitHub search keyword: np.all(
+[INFO] 2026-10-08 10:37:03,530 - GitHub total results for keyword np.all(: 2854912
+[INFO] 2026-10-08 10:37:14,579 - GitHub search keyword: numpy .all(
+[INFO] 2026-10-08 10:37:20,231 - GitHub total results for keyword numpy .all(: 6520832
+[INFO] 2026-10-08 10:37:31,169 - GitHub search completed, 298 valid results
+[INFO] 2026-10-08 10:37:31,170 - Merge and deduplication completed, 20 final results
+[INFO] 2026-10-08 10:37:31,173 - Results for API numpy.all saved to data\searching-results\numpy\numpy.all.json
+[INFO] 2026-10-08 10:37:31,177 - Downloading file: https://raw.githubusercontent.com/keras-team/keras/c12baa41a0f749b1c3d75c99bdb8b9ee8f47e56b/keras/src/utils/numerical_utils_test.py
+[INFO] 2026-10-08 10:37:32,868 - Downloading file: https://raw.githubusercontent.com/numpy/numpy/679e62001618881ffa16d4e4826f0435e97b242f/numpy/typing/tests/data/fail/fromnumeric.pyi
+[INFO] 2026-10-08 10:37:34,421 - Downloading file: https://raw.githubusercontent.com/instadeepai/jumanji/be60de60db789cb708224523ced5271294584a6a/jumanji/environments/routing/multi_cvrp/env_test.py
+[INFO] 2026-10-08 10:37:35,944 - Downloading file: https://raw.githubusercontent.com/nanobowers/py2cr/b7deb8c227cf43ce0e1bf7d638d5b4c00b7e9bdb/tests/numpy/all.py
+[INFO] 2026-10-08 10:37:37,492 - Downloading file: https://raw.githubusercontent.com/ahmedfgad/GeneticAlgorithmPython/8d54c62457f7c5ac21f6b190ee261a7f035f75db/pygad/utils/engine.py
+[INFO] 2026-10-08 10:37:38,963 - Downloading file: https://raw.githubusercontent.com/loli/medpy/d6abf41066cce75c84215a237a0be208e8294760/medpy/filter/image.py
+[INFO] 2026-10-08 10:37:40,533 - Downloading file: https://raw.githubusercontent.com/NOAA-PMEL/PyFerret/8e77eb6f650d3bf0b306cc192f4f432db3b5a8aa/gcircle.py
+[INFO] 2026-10-08 10:37:42,005 - Downloading file: https://raw.githubusercontent.com/nyu-dl/dl4mt-multi/32e1436a3311cdc18eaba680616d88c971107142/mcg/stream.py
+[INFO] 2026-10-08 10:37:43,496 - Downloading file: https://raw.githubusercontent.com/Becksteinlab/GromacsWrapper/d90b853863582987210e97dcc62a447ac5c38555/gromacs/utilities.py
+[INFO] 2026-10-08 10:37:44,970 - Downloading file: https://raw.githubusercontent.com/GalacticDynamics-Oxford/Agama/f302756b8af2b763db58e278e30478517dc8eea3/py/example_mw_nsc.py
+[INFO] 2026-10-08 10:37:46,468 - Downloading file: https://raw.githubusercontent.com/Hiroshiba/yukarin_autoreg/2a36de3d6d9a9d113c3bb1f81ffa000719ee80f2/src_cython/check.py
+[INFO] 2026-10-08 10:37:47,940 - Downloading file: https://raw.githubusercontent.com/modusdatascience/choldate/94fff3e55ef5e923c7b6d7efb50939cf2fdd7cec/bin/example.py
+[INFO] 2026-10-08 10:37:49,463 - Downloading file: https://raw.githubusercontent.com/spyking-circus/spyking-circus/bf16ba0991b9527bd3ab49c0d2638e08dad84088/circus/whitening.py
+[INFO] 2026-10-08 10:37:51,032 - Downloading file: https://raw.githubusercontent.com/SymJAX/SymJAX/d8778c2eb3254b478cef4f45d934bf921e695619/symjax/tensor/base.py
+[INFO] 2026-10-08 10:37:52,589 - Downloading file: https://raw.githubusercontent.com/spyking-circus/spyking-circus/bf16ba0991b9527bd3ab49c0d2638e08dad84088/circus/clustering.py
+[INFO] 2026-10-08 10:37:54,062 - Downloading file: https://raw.githubusercontent.com/MDAnalysis/GridDataFormats/4acc4c37f922190fb3055ad780e54e35603b26e6/gridData/core.py
+[INFO] 2026-10-08 10:37:55,695 - Downloading file: https://raw.githubusercontent.com/matthewearl/deep-anpr/db823ebe283f4e226a80dbbe4cb5b45867bf0485/train.py
+[INFO] 2026-10-08 10:37:57,263 - Downloading file: https://raw.githubusercontent.com/CIRADA-Tools/RM-Tools/bcfd15c1282d61a8be196d16e677b27516b9a680/RMutils/mpfit.py
+[INFO] 2026-10-08 10:37:58,800 - Downloading file: https://raw.githubusercontent.com/astraw/matplotlib-ancient/7272f102482941ada6e5fd874bdf7f185f420526/unit/mlab_unit.py
+[INFO] 2026-10-08 10:38:00,289 - Downloading file: https://raw.githubusercontent.com/thomasmesnard/DeepMind-Teaching-Machines-to-Read-and-Comprehend/8ad50e9f2562b1fd055939e8582f07e46f54b1ef/data.py
+[INFO] 2026-10-08 10:38:01,816 - Starting processing for API: numpy.cumprod
+[INFO] 2026-10-08 10:38:01,816 - Sourcegraph search URL: https://sourcegraph.com/.api/search/stream?q=context:global numpy.cumprod( OR np.cumprod( timeout:45s count:20 type:file lang:python &v=V3&t=keyword&sm=0&cm=t&max-line-len=5120
+[INFO] 2026-10-08 10:38:04,194 - Sourcegraph search URL: https://sourcegraph.com/.api/search/stream?q=context:global numpy .cumprod( timeout:45s count:20 type:file lang:python &v=V3&t=keyword&sm=0&cm=t&max-line-len=5120
+[INFO] 2026-10-08 10:38:06,578 - Sourcegraph search completed, 6 valid results
+[INFO] 2026-10-08 10:38:06,578 - GitHub search keyword: numpy.cumprod(
+[INFO] 2026-10-08 10:38:09,368 - GitHub total results for keyword numpy.cumprod(: 1912
+[INFO] 2026-10-08 10:38:20,464 - GitHub search keyword: np.cumprod(
+[INFO] 2026-10-08 10:38:22,091 - GitHub total results for keyword np.cumprod(: 169472
+[INFO] 2026-10-08 10:38:33,180 - GitHub search keyword: numpy .cumprod(
+[INFO] 2026-10-08 10:38:37,093 - GitHub total results for keyword numpy .cumprod(: 399360
+[INFO] 2026-10-08 10:38:48,161 - GitHub search completed, 297 valid results
+[INFO] 2026-10-08 10:38:48,161 - Merge and deduplication completed, 20 final results
+[INFO] 2026-10-08 10:38:48,163 - Results for API numpy.cumprod saved to data\searching-results\numpy\numpy.cumprod.json
+[INFO] 2026-10-08 10:38:48,165 - Downloading file: https://raw.githubusercontent.com/numpy/numpy/679e62001618881ffa16d4e4826f0435e97b242f/numpy/typing/tests/data/pass/fromnumeric.py
+[INFO] 2026-10-08 10:38:49,686 - Downloading file: https://raw.githubusercontent.com/numpy/numpy/679e62001618881ffa16d4e4826f0435e97b242f/numpy/typing/tests/data/pass/ndarray_misc.py
+[INFO] 2026-10-08 10:38:51,198 - Downloading file: https://raw.githubusercontent.com/nkmk/python-snippets/387c5c5566e7616565b29faf8af5ab8af4f7eb33/notebook/numpy_cumsum_cumprod.py
+[INFO] 2026-10-08 10:38:52,717 - Downloading file: https://raw.githubusercontent.com/wukan1986/AlphaInspect/1f53be696afb2ce75cc67f94ae8d7c4b7a2f7be2/data/prepare_data.py
+[INFO] 2026-10-08 10:38:54,181 - Downloading file: https://raw.githubusercontent.com/EconForge/interpolation.py/c07eab292a223a1fe1dd77c3a87db4f1fa6a83ed/interpolation/cartesian.py
+[INFO] 2026-10-08 10:38:55,742 - Downloading file: https://raw.githubusercontent.com/NOAA-GFDL/MOM6-examples/c1730b8efe16cf7f12fc8db588115cae50f3e802/ice_ocean_SIS2/OM4_025/INPUT/vgrid.py
+[INFO] 2026-10-08 10:38:57,327 - Downloading file: https://raw.githubusercontent.com/ryfeus/lambda-packs/74b21b9cddb57790c804ab973e26141eb7e5c912/Sklearn_arm/source/scipy/ndimage/measurements.py
+[INFO] 2026-10-08 10:38:58,860 - Downloading file: https://raw.githubusercontent.com/ryfeus/lambda-packs/74b21b9cddb57790c804ab973e26141eb7e5c912/Sklearn_x86/source/scipy/ndimage/measurements.py
+[INFO] 2026-10-08 10:39:00,414 - Downloading file: https://raw.githubusercontent.com/ryfeus/lambda-packs/74b21b9cddb57790c804ab973e26141eb7e5c912/Skimage_numpy/source/scipy/ndimage/measurements.py
+[INFO] 2026-10-08 10:39:01,877 - Downloading file: https://raw.githubusercontent.com/arogozhnikov/hep_ml/3129a6f6c3b68a86b7b38a02f4df274dfd262051/hep_ml/speedup.py
+[INFO] 2026-10-08 10:39:03,440 - Downloading file: https://raw.githubusercontent.com/ryfeus/lambda-packs/74b21b9cddb57790c804ab973e26141eb7e5c912/Sklearn_scipy_numpy/source/scipy/ndimage/measurements.py
+[INFO] 2026-10-08 10:39:04,912 - Downloading file: https://raw.githubusercontent.com/CrayLabs/NCAR_ML_EKE/5b2d6cfead0400af9c726213d666b44d171edc93/MOM6_config/INPUT/vgrid.py
+[INFO] 2026-10-08 10:39:06,426 - Downloading file: https://raw.githubusercontent.com/fishjojo/pyscfad/b5f8496fbbbbeed6b617310a5fd089607422a763/pyscfad/gto/moleintor_lite.py
+[INFO] 2026-10-08 10:39:08,082 - Downloading file: https://raw.githubusercontent.com/gr-vt/gr-burst/4d1683235f3bf864a87403f4c2ef116a6cbffa91/python/synchronizer_v3.py
+[INFO] 2026-10-08 10:39:09,653 - Downloading file: https://raw.githubusercontent.com/jasonmccampbell/scipy-refactor/52708e04bca51e7043248d56383780b1e51e0d8f/scipy/ndimage/measurements.py
+[INFO] 2026-10-08 10:39:11,151 - Downloading file: https://raw.githubusercontent.com/mritools/cupyimg/d64168280b2b46a7e2aaf8d16f4b6b07d6554f82/cupyimg/scipy/ndimage/measurements.py
+[INFO] 2026-10-08 10:39:12,642 - Downloading file: https://raw.githubusercontent.com/albertotrunk/ue-stable-diffusion/bb943fc821a165bd00e67ff4f1f020d504e0e65c/Content/Python/scipy/ndimage/_measurements.py
+[INFO] 2026-10-08 10:39:14,259 - Downloading file: https://raw.githubusercontent.com/ktraunmueller/Computable/09eed68240c4a6727b2d24f56d81d08c28c724da/scipy/ndimage/measurements.py
+[INFO] 2026-10-08 10:39:15,727 - Downloading file: https://raw.githubusercontent.com/beiko-lab/gengis/459d1746a74ceb377a1918c9424ea73307c33c7d/bin/Lib/site-packages/scipy/ndimage/measurements.py
+[INFO] 2026-10-08 10:39:17,237 - Starting processing for API: numpy.prod
+[INFO] 2026-10-08 10:39:17,237 - Sourcegraph search URL: https://sourcegraph.com/.api/search/stream?q=context:global np.prod( OR numpy.prod( timeout:45s count:20 type:file lang:python &v=V3&t=keyword&sm=0&cm=t&max-line-len=5120
+[INFO] 2026-10-08 10:39:37,442 - Sourcegraph search URL: https://sourcegraph.com/.api/search/stream?q=context:global numpy .prod( timeout:45s count:20 type:file lang:python &v=V3&t=keyword&sm=0&cm=t&max-line-len=5120
+[INFO] 2026-10-08 10:39:47,506 - Sourcegraph search completed, 4 valid results
+[INFO] 2026-10-08 10:39:47,506 - GitHub search keyword: np.prod(
+[INFO] 2026-10-08 10:39:50,429 - GitHub total results for keyword np.prod(: 1110016
+[INFO] 2026-10-08 10:40:01,577 - GitHub search keyword: numpy.prod(
+[INFO] 2026-10-08 10:40:03,431 - GitHub total results for keyword numpy.prod(: 17792
+[INFO] 2026-10-08 10:40:14,576 - GitHub search keyword: numpy .prod(
+[INFO] 2026-10-08 10:40:19,406 - GitHub total results for keyword numpy .prod(: 1511424
+[INFO] 2026-10-08 10:40:30,278 - GitHub search completed, 282 valid results
+[INFO] 2026-10-08 10:40:30,279 - Merge and deduplication completed, 20 final results
+[INFO] 2026-10-08 10:40:30,283 - Results for API numpy.prod saved to data\searching-results\numpy\numpy.prod.json
+[INFO] 2026-10-08 10:40:30,284 - Downloading file: https://raw.githubusercontent.com/mm-mansour/Fast-Pandas/70882ea18f2fd60bb95fe5af307c7ad5067a54d9/benchmark_prod.py
+[INFO] 2026-10-08 10:40:31,743 - Downloading file: https://raw.githubusercontent.com/jonathf/chaospy/ec8cd460bf1440eca4b409d996cfdb104d24ae06/chaospy/quadrature/utils.py
+[INFO] 2026-10-08 10:40:33,822 - Downloading file: https://raw.githubusercontent.com/naitoh/py2rb/0d2fbc5a86b82707a1d83241a21af6b2cc22c0b8/tests/numpy/product.py
+[INFO] 2026-10-08 10:40:35,324 - Downloading file: https://raw.githubusercontent.com/tolstikhin/wae/63515656201eb6e3c3f32f6d38267401ed8ade8f/wae.py
+[INFO] 2026-10-08 10:40:37,034 - Downloading file: https://raw.githubusercontent.com/hansbuehler/deephedging/fe53fd9a7e402d4ba18bd5b9ec704e0361554f7c/gym.py
+[INFO] 2026-10-08 10:40:38,504 - Downloading file: https://raw.githubusercontent.com/real-stanford/semantic-abstraction/e76495e9ad49db75649394ac466fd3fec057c5b6/net.py
+[INFO] 2026-10-08 10:40:40,088 - Downloading file: https://raw.githubusercontent.com/dongwookim-ml/MMSB/d65cb7dd2dbbd26214600c968fb4bfed5b34c6c2/mmsb.py
+[INFO] 2026-10-08 10:40:41,628 - Downloading file: https://raw.githubusercontent.com/tolstikhin/adagan/746bd8e6a5277a3a95463a66f4e631e1b48fad48/pot.py
+[INFO] 2026-10-08 10:40:43,185 - Downloading file: https://raw.githubusercontent.com/nacro711072/MFPCA/02a3b9b8d83eb73969a82791d68cca31b6f34345/lpr.py
+[INFO] 2026-10-08 10:40:44,681 - Downloading file: https://raw.githubusercontent.com/georglind/babusca/e61e21e34f7c1887bbdef1b5b82abe698845b7f1/g2.py
+[INFO] 2026-10-08 10:40:46,146 - Downloading file: https://raw.githubusercontent.com/jbuckman/dmdp-donutworld/1b59ac59c6eb4935a9e2c00ea097bf0d2a14a8e0/nn.py
+[INFO] 2026-10-08 10:40:47,678 - Downloading file: https://raw.githubusercontent.com/c-f-h/aaa/ec23e63ac6c0459f89217c2970ef4c138e6615f4/aaa.py
+[INFO] 2026-10-08 10:40:49,159 - Downloading file: https://raw.githubusercontent.com/craigiedon/CarlaStuff/1e71eba5581766cc464ab9f89a6aca1e38302512/stl.py
+[INFO] 2026-10-08 10:40:50,613 - Downloading file: https://raw.githubusercontent.com/tolstikhin/wae/63515656201eb6e3c3f32f6d38267401ed8ade8f/ops.py
+[INFO] 2026-10-08 10:40:52,121 - Downloading file: https://raw.githubusercontent.com/dwierichs/General-Parameter-Shift-Rules/54a8f9a151af2eb67e48f788f5340b9acd9cb136/lib.py
+[INFO] 2026-10-08 10:40:53,825 - Downloading file: https://raw.githubusercontent.com/sagarverma/Granular_AI_Final/7ef3228566d5802f21034d2f56e51f943c6a0b46/CAE.py
+[INFO] 2026-10-08 10:40:55,394 - Downloading file: https://raw.githubusercontent.com/vahurvar/arbiter-xor-puf/82f52cd8b289b988b647e4e0675020e54fdb584a/PUF.py
+[INFO] 2026-10-08 10:40:56,895 - Downloading file: https://raw.githubusercontent.com/morning-dews/PGMA_tensorflow/a25240eb59ed695ecc41abd40eebb25986c6f14c/wae.py
+[INFO] 2026-10-08 10:40:58,443 - Downloading file: https://raw.githubusercontent.com/mmetcalf14/QITE/1bc9793691343807dbff6bfbfc5cbc9a1addaaf7/mf.py
+[INFO] 2026-10-08 10:41:00,523 - Processing completed for library: numpy
+==================================================

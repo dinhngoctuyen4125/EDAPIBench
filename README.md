@@ -68,13 +68,9 @@ Khi chuyển sang server, cần chuyển cả file này vì `data/standardized-r
 
 ## Step 4: Cho LLM sinh completion và lọc mẫu deprecated API
 
-Chuẩn bị checkpoint DeepSeek trước khi chạy vì loader dùng `local_files_only=True`. Nếu chưa có trong cache, tải bằng cùng user và môi trường sẽ chạy inference:
+Model được tải tự động từ Hugging Face Hub ở lần chạy đầu và lưu vào cache, các lần sau dùng lại cache. Server cần có kết nối mạng và không đặt `HF_HUB_OFFLINE`/`TRANSFORMERS_OFFLINE`.
 
-```bash
-python -c "from huggingface_hub import snapshot_download; snapshot_download(repo_id='deepseek-ai/deepseek-coder-1.3b-base')"
-```
-
-Sau đó chạy script dưới đây trên Bash. Script gọi `dapi_inference.py` để DeepSeek sinh completion, rồi gọi `predicted_dapi_collection.py` để giữ mẫu sinh API deprecated tương ứng với mapping và loại trùng prompt.
+Chạy script dưới đây trên Bash. Script gọi `dapi_inference.py` để DeepSeek sinh completion, rồi gọi `predicted_dapi_collection.py` để giữ mẫu sinh API deprecated tương ứng với mapping và loại trùng prompt.
 
 ```bash
 bash dapi-collection.sh

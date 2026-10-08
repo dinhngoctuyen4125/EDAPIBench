@@ -1,0 +1,661 @@
+[
+    {
+        "type": "content",
+        "path": "numpy/typing/tests/data/fail/fromnumeric.pyi",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 40,
+                    "line": 0,
+                    "column": 40
+                },
+                "end": {
+                    "offset": 44,
+                    "line": 0,
+                    "column": 44
+                }
+            }
+        ],
+        "repositoryID": 54128,
+        "repository": "github.com/numpy/numpy",
+        "repoStars": 33047,
+        "repoLastFetched": "2026-10-08T03:36:50.130621Z",
+        "branches": [
+            ""
+        ],
+        "commit": "679e62001618881ffa16d4e4826f0435e97b242f",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "\nnp.cumprod(a, axis=1.0)  # type: ignore[call-overload]\nnp.cumprod(a, out=False)  # type: ignore[call-overload]\nnp.cumprod(AR_U)  # type: ignore[type-var]\n\n",
+                "contentStart": {
+                    "offset": 4853,
+                    "line": 125,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 4854,
+                            "line": 126,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 4865,
+                            "line": 126,
+                            "column": 11
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 4909,
+                            "line": 127,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 4920,
+                            "line": 127,
+                            "column": 11
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 4965,
+                            "line": 128,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 4976,
+                            "line": 128,
+                            "column": 11
+                        }
+                    }
+                ],
+                "bestLineMatch": 128
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "numpy/typing/tests/data/pass/fromnumeric.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 40,
+                    "line": 0,
+                    "column": 40
+                },
+                "end": {
+                    "offset": 43,
+                    "line": 0,
+                    "column": 43
+                }
+            }
+        ],
+        "repositoryID": 54128,
+        "repository": "github.com/numpy/numpy",
+        "repoStars": 33047,
+        "repoLastFetched": "2026-10-08T03:36:50.130621Z",
+        "branches": [
+            ""
+        ],
+        "commit": "679e62001618881ffa16d4e4826f0435e97b242f",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "\nnp.cumprod(a)\nnp.cumprod(b)\nnp.cumprod(c)\nnp.cumprod(A)\nnp.cumprod(B)\n\n",
+                "contentStart": {
+                    "offset": 3091,
+                    "line": 206,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 3092,
+                            "line": 207,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 3103,
+                            "line": 207,
+                            "column": 11
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 3106,
+                            "line": 208,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 3117,
+                            "line": 208,
+                            "column": 11
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 3120,
+                            "line": 209,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 3131,
+                            "line": 209,
+                            "column": 11
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 3134,
+                            "line": 210,
+                            "column": 0
+                        },
+                        "end": {
+                            "offset": 3145,
+                            "line": 210,
+                            "column": 11
+                        }
+                    }
+                ],
+                "bestLineMatch": 207
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "numpy/typing/tests/data/pass/ndarray_misc.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 41,
+                    "line": 0,
+                    "column": 41
+                },
+                "end": {
+                    "offset": 44,
+                    "line": 0,
+                    "column": 44
+                }
+            }
+        ],
+        "repositoryID": 54128,
+        "repository": "github.com/numpy/numpy",
+        "repoStars": 33047,
+        "repoLastFetched": "2026-10-08T03:36:50.130621Z",
+        "branches": [
+            ""
+        ],
+        "commit": "679e62001618881ffa16d4e4826f0435e97b242f",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "\ni4.cumprod()\nA.cumprod()\nA.cumprod(out=B1)\n\n",
+                "contentStart": {
+                    "offset": 1643,
+                    "line": 85,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 1646,
+                            "line": 86,
+                            "column": 2
+                        },
+                        "end": {
+                            "offset": 1655,
+                            "line": 86,
+                            "column": 11
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 1658,
+                            "line": 87,
+                            "column": 1
+                        },
+                        "end": {
+                            "offset": 1667,
+                            "line": 87,
+                            "column": 10
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 1670,
+                            "line": 88,
+                            "column": 1
+                        },
+                        "end": {
+                            "offset": 1679,
+                            "line": 88,
+                            "column": 10
+                        }
+                    }
+                ],
+                "bestLineMatch": 87
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "notebook/numpy_cumsum_cumprod.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 29,
+                    "line": 0,
+                    "column": 29
+                },
+                "end": {
+                    "offset": 32,
+                    "line": 0,
+                    "column": 32
+                }
+            }
+        ],
+        "repositoryID": 40282076,
+        "repository": "github.com/nkmk/python-snippets",
+        "repoStars": 310,
+        "repoLastFetched": "2026-10-07T22:36:24.415305Z",
+        "branches": [
+            ""
+        ],
+        "commit": "387c5c5566e7616565b29faf8af5ab8af4f7eb33",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "\nprint(np.cumprod(l))\n# [  1   2   6  24 120 720]\n",
+                "contentStart": {
+                    "offset": 2115,
+                    "line": 110,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2122,
+                            "line": 111,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 2133,
+                            "line": 111,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 111
+            },
+            {
+                "content": "\nprint(np.cumprod(a_1d))\n# [  1   2   6  24 120 720]\n",
+                "contentStart": {
+                    "offset": 1515,
+                    "line": 76,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 1522,
+                            "line": 77,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 1533,
+                            "line": 77,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 77
+            },
+            {
+                "content": "\nprint(np.cumprod(a_2d))\n# [  1   2   6  24 120 720]\n",
+                "contentStart": {
+                    "offset": 1759,
+                    "line": 88,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 1766,
+                            "line": 89,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 1777,
+                            "line": 89,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 89
+            },
+            {
+                "content": "\nprint(np.cumprod(l_2d))\n# [  1   2   6  24 120 720]\n",
+                "contentStart": {
+                    "offset": 2165,
+                    "line": 113,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2172,
+                            "line": 114,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 2183,
+                            "line": 114,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 114
+            },
+            {
+                "content": "\nprint(np.cumprod(a_2d, axis=0))\n# [[ 1  2  3]\n",
+                "contentStart": {
+                    "offset": 1812,
+                    "line": 91,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 1819,
+                            "line": 92,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 1830,
+                            "line": 92,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 92
+            },
+            {
+                "content": "\nprint(np.cumprod(a_2d, axis=1))\n# [[  1   2   6]\n",
+                "contentStart": {
+                    "offset": 1874,
+                    "line": 95,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 1881,
+                            "line": 96,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 1892,
+                            "line": 96,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 96
+            },
+            {
+                "content": "\nprint(np.cumprod(l_2d, axis=0))\n# [[ 1  2  3]\n",
+                "contentStart": {
+                    "offset": 2218,
+                    "line": 116,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2225,
+                            "line": 117,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 2236,
+                            "line": 117,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 117
+            },
+            {
+                "content": "\nprint(np.cumprod(l_2d, axis=1))\n# [[  1   2   6]\n",
+                "contentStart": {
+                    "offset": 2280,
+                    "line": 120,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 2287,
+                            "line": 121,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 2298,
+                            "line": 121,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 121
+            },
+            {
+                "content": "\nprint(np.cumprod(a_1d, dtype=float))\n# [  1.   2.   6.  24. 120. 720.]\n",
+                "contentStart": {
+                    "offset": 1568,
+                    "line": 79,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 1575,
+                            "line": 80,
+                            "column": 6
+                        },
+                        "end": {
+                            "offset": 1586,
+                            "line": 80,
+                            "column": 17
+                        }
+                    }
+                ],
+                "bestLineMatch": 80
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "type": "content",
+        "path": "data/prepare_data.py",
+        "pathMatches": [
+            {
+                "start": {
+                    "offset": 17,
+                    "line": 0,
+                    "column": 17
+                },
+                "end": {
+                    "offset": 20,
+                    "line": 0,
+                    "column": 20
+                }
+            }
+        ],
+        "repositoryID": 62652426,
+        "repository": "github.com/wukan1986/AlphaInspect",
+        "repoStars": 57,
+        "repoLastFetched": "2026-10-08T03:18:12.074294Z",
+        "branches": [
+            ""
+        ],
+        "commit": "1f53be696afb2ce75cc67f94ae8d7c4b7a2f7be2",
+        "hunks": null,
+        "chunkMatches": [
+            {
+                "content": "df = pd.DataFrame({\n    'OPEN': np.cumprod(1 + np.random.uniform(-0.01, 0.01, size=(_N, _K)), axis=0).reshape(-1),\n    'HIGH': np.cumprod(1 + np.random.uniform(-0.01, 0.01, size=(_N, _K)), axis=0).reshape(-1),\n    'LOW': np.cumprod(1 + np.random.uniform(-0.01, 0.01, size=(_N, _K)), axis=0).reshape(-1),\n    'CLOSE': np.cumprod(1 + np.random.uniform(-0.01, 0.01, size=(_N, _K)), axis=0).reshape(-1),\n    \"FILTER\": np.tri(_N, _K, k=-2).reshape(-1),\n",
+                "contentStart": {
+                    "offset": 343,
+                    "line": 19,
+                    "column": 0
+                },
+                "ranges": [
+                    {
+                        "start": {
+                            "offset": 375,
+                            "line": 20,
+                            "column": 12
+                        },
+                        "end": {
+                            "offset": 386,
+                            "line": 20,
+                            "column": 23
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 470,
+                            "line": 21,
+                            "column": 12
+                        },
+                        "end": {
+                            "offset": 481,
+                            "line": 21,
+                            "column": 23
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 564,
+                            "line": 22,
+                            "column": 11
+                        },
+                        "end": {
+                            "offset": 575,
+                            "line": 22,
+                            "column": 22
+                        }
+                    },
+                    {
+                        "start": {
+                            "offset": 660,
+                            "line": 23,
+                            "column": 13
+                        },
+                        "end": {
+                            "offset": 671,
+                            "line": 23,
+                            "column": 24
+                        }
+                    }
+                ],
+                "bestLineMatch": 22
+            }
+        ],
+        "language": "Python"
+    },
+    {
+        "repository": "github.com/EconForge/interpolation.py",
+        "commit": "c07eab292a223a1fe1dd77c3a87db4f1fa6a83ed",
+        "path": "interpolation/cartesian.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/NOAA-GFDL/MOM6-examples",
+        "commit": "c1730b8efe16cf7f12fc8db588115cae50f3e802",
+        "path": "ice_ocean_SIS2/OM4_025/INPUT/vgrid.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/ryfeus/lambda-packs",
+        "commit": "74b21b9cddb57790c804ab973e26141eb7e5c912",
+        "path": "Sklearn_arm/source/scipy/ndimage/measurements.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/ryfeus/lambda-packs",
+        "commit": "74b21b9cddb57790c804ab973e26141eb7e5c912",
+        "path": "Sklearn_x86/source/scipy/ndimage/measurements.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/ryfeus/lambda-packs",
+        "commit": "74b21b9cddb57790c804ab973e26141eb7e5c912",
+        "path": "Skimage_numpy/source/scipy/ndimage/measurements.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/arogozhnikov/hep_ml",
+        "commit": "3129a6f6c3b68a86b7b38a02f4df274dfd262051",
+        "path": "hep_ml/speedup.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/ryfeus/lambda-packs",
+        "commit": "74b21b9cddb57790c804ab973e26141eb7e5c912",
+        "path": "Sklearn_scipy_numpy/source/scipy/ndimage/measurements.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/CrayLabs/NCAR_ML_EKE",
+        "commit": "5b2d6cfead0400af9c726213d666b44d171edc93",
+        "path": "MOM6_config/INPUT/vgrid.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/fishjojo/pyscfad",
+        "commit": "b5f8496fbbbbeed6b617310a5fd089607422a763",
+        "path": "pyscfad/gto/moleintor_lite.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/gr-vt/gr-burst",
+        "commit": "4d1683235f3bf864a87403f4c2ef116a6cbffa91",
+        "path": "python/synchronizer_v3.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/jasonmccampbell/scipy-refactor",
+        "commit": "52708e04bca51e7043248d56383780b1e51e0d8f",
+        "path": "scipy/ndimage/measurements.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/mritools/cupyimg",
+        "commit": "d64168280b2b46a7e2aaf8d16f4b6b07d6554f82",
+        "path": "cupyimg/scipy/ndimage/measurements.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/albertotrunk/ue-stable-diffusion",
+        "commit": "bb943fc821a165bd00e67ff4f1f020d504e0e65c",
+        "path": "Content/Python/scipy/ndimage/_measurements.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/ktraunmueller/Computable",
+        "commit": "09eed68240c4a6727b2d24f56d81d08c28c724da",
+        "path": "scipy/ndimage/measurements.py",
+        "source": "github"
+    },
+    {
+        "repository": "github.com/beiko-lab/gengis",
+        "commit": "459d1746a74ceb377a1918c9424ea73307c33c7d",
+        "path": "bin/Lib/site-packages/scipy/ndimage/measurements.py",
+        "source": "github"
+    }
+]
