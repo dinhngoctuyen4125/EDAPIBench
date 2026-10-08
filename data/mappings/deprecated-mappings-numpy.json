@@ -1,0 +1,5 @@
+{
+    "numpy.alltrue" : "numpy.all", 
+    "numpy.cumproduct" : "numpy.cumprod", 
+    "numpy.product" : "numpy.prod"
+}

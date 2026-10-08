@@ -1,0 +1,12 @@
+{
+    "pandas.DataFrame.applymap" : "pandas.DataFrame.map", 
+    "pandas.DataFrame.first" : "pandas.DataFrame.loc", 
+    "pandas.DataFrame.iteritems" : "pandas.DataFrame.items", 
+    "pandas.DataFrame.last" : "pandas.DataFrame.loc", 
+    "pandas.DataFrame.pad" : "pandas.DataFrame.ffill", 
+    "pandas.DataFrame.select" : "pandas.DataFrame.loc", 
+    "pandas.DataFrame.swapaxes" : "pandas.DataFrame.transpose", 
+    "pandas.Series.iteritems" : "pandas.Series.items", 
+    "pandas.Series.pad" : "pandas.Series.ffill", 
+    "pandas.io.formats.style.Styler.render" : "pandas.io.formats.style.Styler.to_html"
+}

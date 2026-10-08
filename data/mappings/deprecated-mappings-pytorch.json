@@ -1,0 +1,23 @@
+{
+    "torch.btriunpack" : "torch.lu_unpack", 
+    "torch.chain_matmul" : "torch.linalg.multi_dot", 
+    "torch.cholesky" : "torch.linalg.cholesky", 
+    "torch.eig" : "torch.linalg.eig", 
+    "torch.lstsq" : "torch.linalg.lstsq", 
+    "torch.lu" : "torch.linalg.lu_factor", 
+    "torch.lu_solve" : "torch.linalg.lu_solve", 
+    "torch.matrix_rank" : "torch.linalg.matrix_rank", 
+    "torch.nn.functional.upsample" : "torch.nn.functional.interpolate", 
+    "torch.nn.functional.upsample_bilinear" : "torch.nn.functional.interpolate", 
+    "torch.nn.functional.upsample_nearest" : "torch.nn.functional.interpolate", 
+    "torch.nn.modules.module.register_module_backward_hook" : "torch.nn.modules.module.register_module_full_backward_hook", 
+    "torch.nn.utils.stateless.functional_call" : "torch.func.functional_call", 
+    "torch.nn.utils.weight_norm" : "torch.nn.utils.parametrizations.weight_norm", 
+    "torch.norm" : "torch.linalg.norm", 
+    "torch.qr" : "torch.linalg.qr", 
+    "torch.solve" : "torch.linalg.solve", 
+    "torch.svd" : "torch.linalg.svd", 
+    "torch.symeig" : "torch.linalg.eigh", 
+    "torch.testing.assert_allclose" : "torch.testing.assert_close", 
+    "torch.triangular_solve" : "torch.linalg.solve_triangular"
+}

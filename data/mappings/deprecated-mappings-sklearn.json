@@ -1,0 +1,6 @@
+{
+    "sklearn.datasets.fetch_mldata" : "sklearn.datasets.fetch_openml", 
+    "sklearn.metrics.jaccard_similarity_score" : "sklearn.metrics.jaccard_score", 
+    "sklearn.mixture.GMM" : "sklearn.mixture.GaussianMixture", 
+    "sklearn.preprocessing.Imputer" : "sklearn.impute.SimpleImputer"
+}

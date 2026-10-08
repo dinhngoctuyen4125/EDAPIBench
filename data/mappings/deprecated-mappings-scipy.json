@@ -1,0 +1,20 @@
+{
+    "scipy.integrate.cumtrapz" : "scipy.integrate.cumulative_trapezoid", 
+    "scipy.integrate.simps" : "scipy.integrate.simpson", 
+    "scipy.integrate.trapz" : "scipy.integrate.trapezoid", 
+    "scipy.interpolate.interp2d" : "scipy.interpolate.bisplev", 
+    "scipy.linalg.pinv2" : "scipy.linalg.pinv", 
+    "scipy.misc.comb" : "scipy.special.comb", 
+    "scipy.misc.face" : "scipy.datasets.face", 
+    "scipy.misc.factorial" : "scipy.special.factorial", 
+    "scipy.misc.factorial2" : "scipy.special.factorial2", 
+    "scipy.misc.logsumexp" : "scipy.special.logsumexp", 
+    "scipy.signal.hanning" : "scipy.signal.windows.hann", 
+    "scipy.special.errprint" : "scipy.special.seterr", 
+    "scipy.special.sph_jn" : "scipy.special.spherical_jn", 
+    "scipy.special.sph_yn" : "scipy.special.spherical_yn", 
+    "scipy.stats.betai" : "scipy.special.betainc", 
+    "scipy.stats.chisqprob" : "scipy.stats.chi2.sf", 
+    "scipy.stats.itemfreq" : "scipy.stats.binned_statistic", 
+    "scipy.stats.rvs_ratio_uniforms" : "scipy.stats.sampling.RatioUniforms"
+}

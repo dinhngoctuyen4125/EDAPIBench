@@ -1,0 +1,5 @@
+{
+    "seaborn.despine" : "seaborn.utils.despine", 
+    "seaborn.factorplot" : "seaborn.catplot", 
+    "seaborn.tsplot" : "seaborn.lineplot"
+}
